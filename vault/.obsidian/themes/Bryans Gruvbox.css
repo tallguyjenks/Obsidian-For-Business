@@ -1,0 +1,2031 @@
+/**=================================================================================
+/** ██████╗░██████╗░██╗░░░██╗░█████╗░███╗░░██╗██╗░██████╗
+/** ██╔══██╗██╔══██╗╚██╗░██╔╝██╔══██╗████╗░██║╚█║██╔════╝
+/** ██████╦╝██████╔╝░╚████╔╝░███████║██╔██╗██║░╚╝╚█████╗░
+/** ██╔══██╗██╔══██╗░░╚██╔╝░░██╔══██║██║╚████║░░░░╚═══██╗
+/** ██████╦╝██║░░██║░░░██║░░░██║░░██║██║░╚███║░░░██████╔╝
+/** ╚═════╝░╚═╝░░╚═╝░░░╚═╝░░░╚═╝░░╚═╝╚═╝░░╚══╝░░░╚═════╝░
+/**
+/** ░█████╗░██████╗░░██████╗██╗██████╗░██╗░█████╗░███╗░░██╗  ░█████╗░░██████╗░██████╗
+/** ██╔══██╗██╔══██╗██╔════╝██║██╔══██╗██║██╔══██╗████╗░██║  ██╔══██╗██╔════╝██╔════╝
+/** ██║░░██║██████╦╝╚█████╗░██║██║░░██║██║███████║██╔██╗██║  ██║░░╚═╝╚█████╗░╚█████╗░
+/** ██║░░██║██╔══██╗░╚═══██╗██║██║░░██║██║██╔══██║██║╚████║  ██║░░██╗░╚═══██╗░╚═══██╗
+/** ╚█████╔╝██████╦╝██████╔╝██║██████╔╝██║██║░░██║██║░╚███║  ╚█████╔╝██████╔╝██████╔╝
+/** ░╚════╝░╚═════╝░╚═════╝░╚═╝╚═════╝░╚═╝╚═╝░░╚═╝╚═╝░░╚══╝  ░╚════╝░╚═════╝░╚═════╝░
+/**==================================================================================*/
+
+/** ----- TABLE OF CONTENTS ----- */
+
+/** 1. Default Theme */
+/** 2. Custom CSS Section */
+/** ____ 2.1 Bullet Points */
+/** ________ 2.1.1 Bullet Point Relationship Lines -- https://forum.obsidian.md/t/meta-post-common-css-hacks/1978/2 */
+/** ________ 2.1.2 tasklist (preview) indentation lines correction -- https://forum.obsidian.md/t/bullet-lines-in-css-for-checkboxes/6262/3 */
+/** ________ 2.1.3 Better Bullet Points In Edit Mode https://forum.obsidian.md/t/clutter-free-edit-mode/6791/30 */
+/** ________ 2.1.4 Bullet points in preview -- https://discord.com/channels/686053708261228577/702656734631821413/772094128832905226 */
+/** ________ 2.1.5 Bullet List Boxing -- https://discord.com/channels/686053708261228577/702656734631821413/784610806561636413 */
+/** ____ 2.2 File Navigation Pane */
+/** ________ 2.2.1 Relationship lines for the folder levels in file navigation: https://forum.obsidian.md/t/meta-post-common-css-hacks/1978/112 */
+/** ________ 2.2.2 Custom icons differing files and folders -- https://discordapp.com/channels/686053708261228577/702656734631821413/755293685046050896 */
+/** ________ 2.2.3 Top Level Folder Icons -- https://discord.com/channels/686053708261228577/702656734631821413/805318111917113354 */
+/** ____ 2.3 Clutter Free Mode */
+/** ________ 2.3.1 Make subtler folding gutter arrows -- https://forum.obsidian.md/t/meta-post-common-css-hacks/1978/10 */
+/** ________ 2.3.2 Hide Block Reference ID's -- https://discord.com/channels/686053708261228577/716028884885307432/769267134114037871 */
+/** ________ 2.3.3 Shortened Url Links -- https://forum.obsidian.md/t/hide-or-truncate-urls-in-editor-using-css/359/3 */
+/** ________ 2.3.4 highlight (==) not visible anymore if not active line -- https://forum.obsidian.md/t/meta-post-common-css-hacks/1978/221 */
+/** ________ 2.3.5 Make code blocks wrap in preview mode too */
+/** ________ 2.3.6 Hide search query title and stop highlighting found element -- https://forum.obsidian.md/t/meta-post-common-css-hacks/1978/307 */
+/** ________ 2.3.7 vertically centre line numbers in large paragraphs -- https://discord.com/channels/686053708261228577/702656734631821413/822257712825237524 */
+/** ________ 2.3.8 Fix padding of transcluded blocks in lists */
+/** ____ 2.4 Font Formatting */
+/** ________ 2.4.1 Make Mathjax Font Larger */
+/** ________ 2.4.2 Hyphenation & Justification -- https://forum.obsidian.md/t/meta-post-common-css-hacks/1978/25 */
+/** ________ 2.4.3 Stylish Block Quotes -- https://forum.obsidian.md/t/meta-post-common-css-hacks/1978/39 */
+/** ________ 2.4.4 General Font Formatting */
+/** ________ 2.4.5 Stylish Signatures -- https://discord.com/channels/686053708261228577/702656734631821413/784210155923177552 */
+/** ____ 2.5 Graph Formatting */
+/** ________ 2.5.1 Graph View CSS -- https://discordapp.com/channels/686053708261228577/702656734631821413/760488978691784705 */
+/** ____ 2.6 Image Manipulation */
+/** ________ 2.6.1 Image Hover Grow -- https://forum.obsidian.md/t/meta-post-common-css-hacks/1978/29 */
+/** ____ 2.7 Check Boxes */
+/** ________ 2.7.1 Nicer Round Checkboxes -- https://forum.obsidian.md/t/meta-post-common-css-hacks/1978/34 */
+/** ________ 2.7.2 Animated Check Boxes -- https://github.com/TriDiamond/Obsidian-Obsidianite/blob/82207bed4313ee0e6f0bb1fd59b04129408018f5/obsidian.css#L463 */
+/** ________ 2.7.3 Hide Completed Tasks In Preview -- https://forum.obsidian.md/t/hide-checked-todo-s/14043 */
+/** ____ 2.8 Tags */
+/** ________ 2.8.1 Tag Pills -- https://forum.obsidian.md/t/meta-post-common-css-hacks/1978/72 */
+/** ________ 2.8.2 Tags to the side of the document -- https://forum.obsidian.md/t/meta-post-common-css-hacks/1978/327 */
+/** ____ 2.9 [[Link]] Modification */
+/** ________ 2.9.1 Bigger Link Hover Popup Preview -- https://forum.obsidian.md/t/meta-post-common-css-hacks/1978/175 */
+/** ________ 2.9.2 The modal popups from link hovers */
+/** ____ 2.10 Plugin Specific CSS */
+/** ________ 2.10.1 Calendar Plugin CSS */
+/** ________ 2.10.2 T0DOIST Plugin CSS -- https://github.com/jamiebrynes7/clair-de-lune-obsidian-theme/blob/master/src/modules/extensions/todoist.scss */
+/** ________ 2.10.3 DayPlanner Plugin CSS */
+/** ________ 2.10.4 Folder Note CSS */
+/** ____ 2.11 Heading Formatting */
+/** ________ 2.11.1 Heading Under Gradient Line -- https://github.com/TriDiamond/Obsidian-Obsidianite */
+/** ________ 2.11.2 Emoji Orientation in Andy Mode Headers -- https://discord.com/channels/686053708261228577/702656734631821413/775900471406624768 */
+/** ________ 2.11.3 Heading Horizontal Lines -- https://forum.obsidian.md/t/meta-post-common-css-hacks/1978/288?u=tallguyjenks */
+/** ____ 2.12 Horizontal Rule Formatting */
+/** ________ 2.12.1 Aesthetic Horizontal Rule -- https://github.com/TriDiamond/Obsidian-Obsidianite */
+/** ____ 2.13 PDF Export Formatting */
+/** ________ 2.13.1 Page Break -- https://gist.github.com/liamcain/81679412643690a7cdd13dff4dc909ce */
+/** ____ 2.14 Tables */
+/** ________ 2.14.1 Banded Table Rows -- https://discord.com/channels/686053708261228577/702656734631821413/777106171948564500 */
+/** ____ 2.15 Custom HTML Elements */
+/** ________ 2.15.1 aside format -- https://discord.com/channels/686053708261228577/707816848615407697/784964375806083124 */
+/** ________ 2.15.2 Buttons -- https://discord.com/channels/686053708261228577/744933215063638183/784289179328708648 */
+/** ________ 2.15.3 Definition Lists */
+/** ________ 2.15.4 Code Language Fences -- https://discord.com/channels/686053708261228577/702656734631821413/822915125522202654 */
+/** ________ 2.15.5 Rounded Edges of Inline Code blocks https://discord.com/channels/686053708261228577/702656734631821413/822181163639767081 */
+/** ____ 2.16 Quick Switcher */
+/** ________ 2.16.1 Fix the quick switcher highligher after background color change */
+/** __ 3. Grave Yard */
+/** ============================================================================================================================================================ */
+
+/** 1. Default Theme */
+:root
+{
+    --dark0-hard:     #1d2021;
+    --dark0:          #282828;
+    --dark0-soft:     #32302f;
+    --dark1:          #3c3836;
+    --dark2:          #504945;
+    --dark3:          #665c54;
+    --dark4:          #7c6f64;
+
+    --gray:           #928374;
+
+    --light0-hard:    #f9f5d7;
+    --light0:         #fbf1c7;
+    --light0-soft:    #f2e5bc;
+    --light1:         #ebdbb2;
+    --light2:         #d5c4a1;
+    --light3:         #bdae93;
+    --light4:         #a89984;
+
+    --bright-red:     #fb4934;
+    --bright-green:   #b8bb26;
+    --bright-yellow:  #fabd2f;
+    --bright-blue:    #83a598;
+    --bright-purple:  #d3869b;
+    --bright-aqua:    #8ec07c;
+    --bright-orange:  #fe8019;
+
+    --neutral-red:    #cc241d;
+    --neutral-green:  #98971a;
+    --neutral-yellow: #d79921;
+    --neutral-blue:   #458588;
+    --neutral-purple: #b16286;
+    --neutral-aqua:   #689d6a;
+    --neutral-orange: #d65d0e;
+
+    --faded-red:      #9d0006;
+    --faded-green:    #79740e;
+    --faded-yellow:   #b57614;
+    --faded-blue:     #076678;
+    --faded-purple:   #8f3f71;
+    --faded-aqua:     #427b58;
+    --faded-orange:   #af3a03;
+}
+
+.theme-dark
+{
+    --font-monospace: 'fira code', 'Hack Nerd Font', 'Source Code Pro', monospace;
+    --background-primary:         var(--dark0);
+    --background-primary-alt:     var(--dark0);
+    --background-secondary:       var(--dark0-hard);
+    --background-secondary-alt:   var(--dark1);
+    --text-normal:                var(--light0);
+    --text-faint:                 var(--light3);
+    --text-title-h1:              var(--neutral-red);
+    --text-title-h2:              var(--neutral-orange);
+    --text-title-h3:              var(--neutral-yellow);
+    --text-title-h4:              var(--neutral-green);
+    --text-title-h5:              var(--neutral-aqua);
+    --text-title-h6:              var(--neutral-purple);
+    --text-link:                  var(--bright-blue);
+    --text-a:                     var(--bright-orange);
+    --text-a-hover:               var(--bright-blue);
+    --text-mark:                  var(--neutral-yellow);
+    --pre-code:                   var(--dark1);
+    --text-highlight-bg:          var(--faded-aqua);
+    --interactive-accent:         var(--bright-orange);
+    --interactive-before:         var(--dark4);
+    --background-modifier-border: var(--dark2);
+    --text-accent:                var(--bright-orange);
+    --interactive-accent-rgb:     var(--bright-orange);
+    --inline-code:                var(--bright-blue);
+    --code-block:                 var(--bright-blue);
+    --vim-cursor:                 var(--bright-orange);
+    --text-selection:             rgba(168, 153, 132, 0.5); /* light4 */
+}
+
+.theme-light
+{
+    --background-primary:         var(--light0);
+    --background-primary-alt:     var(--light0);
+    --background-secondary:       var(--light0-hard);
+    --background-secondary-alt:   var(--light1);
+    --text-normal:                var(--dark0);
+    --text-faint:                 var(--dark3);
+    --text-title-h1:              var(--faded-red);
+    --text-title-h2:              var(--faded-orange);
+    --text-title-h3:              var(--faded-yellow);
+    --text-title-h4:              var(--faded-green);
+    --text-title-h5:              var(--faded-aqua);
+    --text-link:                  var(--neutral-blue);
+    --text-a:                     var(--neutral-orange);
+    --text-a-hover:               var(--neutral-blue);
+    --text-mark:                  var(--neutral-yellow);
+    --pre-code:                   var(--light1);
+    --text-highlight-bg:          var(--bright-aqua);
+    --interactive-accent:         var(--neutral-orange);
+    --interactive-before:         var(--light4);
+    --background-modifier-border: var(--light2);
+    --text-accent:                var(--neutral-orange);
+    --interactive-accent-rgb:     var(--neutral-orange);
+    --inline-code:                var(--neutral-blue);
+    --vim-cursor:                 var(--neutral-orange);
+    --text-selection:             rgba(189, 174, 147, 0.5); /* light3 */
+}
+
+.theme-dark code[class*="language-"],
+.theme-dark pre[class*="language-"],
+.theme-light code[class*="language-"],
+.theme-light pre[class*="language-"]
+{
+    text-shadow: none !important;
+    background-color: var(--pre-code) !important;
+}
+
+.graph-view.color-circle,
+.graph-view.color-fill-highlight,
+.graph-view.color-line-highlight
+{
+    color: var(--interactive-accent-rgb) !important;
+}
+.graph-view.color-text
+{
+    color: var(--text-a-hover) !important;
+}
+/*
+.graph-view.color-fill
+{
+    color: var(--background-secondary);
+}
+.graph-view.color-line
+{
+  color: var(--background-modifier-border);
+}
+*/
+
+html,
+body
+{
+    font-size: 16px !important;
+    font-family: var(--font-monospace); /** Remove this to return body font back to normal */
+    
+    /** Norse rune font for hilarity Comes from dafont.com */
+    --custom-font: 'Norse';
+    /* --custom-font: 'fira code', 'Hack Nerd Font', 'Source Code Pro', monospace; */
+    --custom-H1-font-size: 38px;
+    --custom-H2-font-size: 34px;
+    --custom-H3-font-size: 30px;
+    --custom-H4-font-size: 26px;
+    --custom-H5-font-size: 22px;
+    --custom-H6-font-size: 18px;
+    /* --custom-font: var(--font-monospace); */
+    /* font-family: 'Norse'; 
+    font-size: 20px !important; */
+}
+
+strong
+{
+    font-weight: 600 !important;
+}
+
+a,
+.cm-hmd-internal-link
+{
+    color: var(--text-a) !important;
+    text-decoration: none !important;
+}
+
+a:hover,
+.cm-hmd-internal-link:hover,
+.cm-url
+{
+    color: var(--text-a-hover) !important;
+    text-decoration: none !important;
+}
+
+mark
+{
+    background-color: var(--text-mark) !important;
+    color: var(--dark0) !important;
+}
+
+.view-actions a
+{
+    color: var(--text-normal) !important;
+}
+
+.view-actions a:hover
+{
+    color: var(--text-a) !important;
+}
+
+.HyperMD-codeblock-bg
+{
+    background-color: var(--pre-code) !important;
+}
+
+.HyperMD-codeblock
+{
+    line-height: 1.4em !important;
+    color: var(--code-block) !important;
+}
+
+.HyperMD-codeblock-begin
+{
+    border-top-left-radius: 4px !important;
+    border-top-right-radius: 4px !important;
+}
+
+.HyperMD-codeblock-end
+{
+    border-bottom-left-radius: 4px !important;
+    border-bottom-right-radius: 4px !important;
+}
+
+th
+{
+    font-weight: 600 !important;
+}
+
+thead
+{
+    border-bottom: 2px solid var(--background-modifier-border) !important;
+}
+
+.HyperMD-table-row
+{
+    line-height: normal !important;
+    padding-left: 4px !important;
+    padding-right: 4px !important;
+    background-color: var(--pre-code) !important;
+}
+
+.HyperMD-table-row-0
+{
+    /* padding-top: 4px !important; */
+}
+
+.CodeMirror-foldgutter-folded,
+.is-collapsed .nav-folder-collapse-indicator
+{
+    color: var(--text-a) !important;
+}
+
+.nav-file-tag
+{
+    color: var(--text-a) !important;
+}
+
+.is-active .nav-file-title
+{
+    color: var(--text-a) !important;
+    background-color: var(--background-primary-alt) !important;
+}
+
+.nav-file-title
+{
+    border-bottom-left-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+}
+
+img
+{
+    display: block !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.HyperMD-list-line
+{
+    padding-top: 0 !important;
+}
+.CodeMirror-code,
+.CodeMirror-linenumber,
+.cm-formatting
+{
+    font-family: var(--font-monospace) !important;
+    font-size: 0.9em;
+}
+
+.markdown-preview-section pre code,
+.markdown-preview-section code
+{
+    font-size: 0.9em !important;
+    background-color: var(--pre-code) !important;
+}
+
+.markdown-preview-section pre code
+{
+    padding: 4px !important;
+    line-height: 1.4em !important;
+    display: block !important;
+    color: var(--code-block) !important;
+}
+
+.markdown-preview-section code
+{
+    color: var(--inline-code) !important;
+}
+
+.cm-s-obsidian,
+.cm-inline-code
+{
+    -webkit-font-smoothing: auto !important;
+}
+
+.cm-inline-code
+{
+    color: var(--inline-code) !important;
+    background-color: var(--pre-code) !important;
+    padding: 1px !important;
+}
+
+.workspace-leaf-header-title
+{
+    font-weight: 600 !important;
+}
+
+.side-dock-title
+{
+    padding-top: 15px !important;
+    font-size: 20px !important;
+}
+
+.side-dock-ribbon-tab:hover,
+.side-dock-ribbon-action:hover,
+.side-dock-ribbon-action.is-active:hover,
+.nav-action-button:hover,
+.side-dock-collapse-btn:hover
+{
+    color: var(--text-a);
+}
+
+.side-dock
+{
+    border-right: 0 !important;
+}
+
+.cm-s-obsidian,
+.markdown-preview-view
+{
+    /* padding-left: 10px !important; */
+    padding-right: 10px !important;
+}
+
+/* vertical resize-handle */
+.workspace-split.mod-vertical > * > .workspace-leaf-resize-handle,
+.workspace-split.mod-left-split > .workspace-leaf-resize-handle,
+.workspace-split.mod-right-split > .workspace-leaf-resize-handle
+{
+    width: 1px !important;
+    background-color: var(--background-secondary-alt);
+}
+
+/* horizontal resize-handle */
+.workspace-split.mod-horizontal > * > .workspace-leaf-resize-handle
+{
+    height: 1px !important;
+    background-color: var(--background-secondary-alt);
+}
+
+/* Remove vertical split padding */
+.workspace-split.mod-root .workspace-split.mod-vertical .workspace-leaf-content,
+.workspace-split.mod-vertical > .workspace-split,
+.workspace-split.mod-vertical > .workspace-leaf,
+.workspace-tabs
+{
+    padding-right: 0px;
+}
+
+.markdown-embed-title
+{
+    font-weight: 600 !important;
+}
+
+.markdown-embed
+{
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    margin-left: 10px !important;
+    margin-right: 10px !important;
+}
+
+.mermaid .note
+{
+    fill: var(--dark3) !important;
+}
+
+.cm-header-1,
+.markdown-preview-section h1
+{
+    font-weight: 500 !important;
+    font-size: var(--custom-H1-font-size) !important;
+    color: var(--text-title-h1) !important;
+    background: -webkit-linear-gradient(var(--bright-red),var(--faded-red));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: var(--custom-font) !important;
+}
+
+.cm-header-2,
+.markdown-preview-section h2
+{
+    font-weight: 500 !important;
+    font-size: var(--custom-H2-font-size) !important;
+    color: var(--text-title-h2) !important;
+    background: -webkit-linear-gradient(var(--bright-orange),var(--faded-orange));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: var(--custom-font) !important;
+}
+
+.cm-header-3,
+.markdown-preview-section h3
+{
+    font-weight: 500 !important;
+    font-size: var(--custom-H3-font-size) !important;
+    color: var(--text-title-h3) !important;
+    background: -webkit-linear-gradient(var(--bright-yellow),var(--faded-yellow));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: var(--custom-font) !important;
+}
+
+.cm-header-4,
+.markdown-preview-section h4
+{
+    font-weight: 500 !important;
+    font-size: var(--custom-H4-font-size) !important;
+    color: var(--text-title-h4) !important;
+    background: -webkit-linear-gradient(var(--bright-green),var(--faded-green));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: var(--custom-font) !important;
+}
+
+.cm-header-5,
+.markdown-preview-section h5
+{
+  font-weight: 500 !important;
+  font-size: var(--custom-H5-font-size) !important;
+  color: var(--text-title-h5) !important;
+  background: -webkit-linear-gradient(var(--bright-aqua),var(--faded-aqua));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: var(--custom-font) !important;
+}
+
+.cm-header-6,
+.markdown-preview-section h6
+{
+  font-weight: 500 !important;
+  font-size: var(--custom-H6-font-size) !important;
+  color: var(--text-title-h6) !important;
+  background: -webkit-linear-gradient(var(--bright-purple),var(--faded-purple));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: var(--custom-font) !important;
+}
+
+.suggestion-item.is-selected
+{
+    background-color: var(--background-secondary);
+}
+
+.empty-state-container:hover
+{
+    background-color: var(--background-secondary-alt);
+    border: 5px solid var(--interactive-accent) !important;
+}
+
+.checkbox-container
+{
+    background-color: var(--interactive-before);
+}
+
+.checkbox-container:after
+{
+    background-color: var(--background-secondary-alt);
+}
+
+.mod-cta
+{
+    color: var(--background-secondary-alt) !important;
+    font-weight: 600 !important;
+}
+
+.mod-cta:hover
+{
+    background-color: var(--interactive-before) !important;
+    font-weight: 600 !important;
+}
+
+.CodeMirror-cursor
+{
+    background-color: var(--vim-cursor) !important;
+    opacity: 60% !important;
+}
+
+input.task-list-item-checkbox {
+    border: 1px solid var(--dark4);
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+input.task-list-item-checkbox:checked
+{
+    background-color: var(--dark4);
+    box-shadow: inset 0 0 0 2px var(--background-primary);
+}
+
+::selection
+{
+    background-color: var(--text-selection) !important;
+}
+
+/** .. 2. Custom CSS Section */
+/** .... 2.1 Bullet Points */
+/** ...... 2.1.1 Bullet Point Relationship Lines -- https://forum.obsidian.md/t/meta-post-common-css-hacks/1978/2 */
+.cm-hmd-list-indent .cm-tab,
+ul ul {
+  position: relative;
+}
+.cm-hmd-list-indent .cm-tab::before,
+ul ul::before {
+  content: "";
+  border-left: 1px solid var(--bright-aqua);
+  position: absolute;
+}
+.cm-hmd-list-indent .cm-tab::before {
+  left: 5px;
+  top: -5px;
+  bottom: -4px;
+}
+ul ul::before {
+  left: -16px;
+  top: 0;
+  bottom: 0;
+}
+.cm-hmd-list-indent .cm-tab,
+ol ol {
+  position: relative;
+}
+.cm-hmd-list-indent .cm-tab::before,
+ol ol::before {
+  content: "";
+  border-left: 1px solid var(--bright-aqua);
+  position: absolute;
+}
+.cm-hmd-list-indent .cm-tab::before {
+  left: 5px;
+  top: -5px;
+  bottom: -4px;
+}
+ol ol::before {
+  left: -16px;
+  top: 0;
+  bottom: 0;
+}
+/** ...... 2.1.2 tasklist (preview) indentation lines correction -- https://forum.obsidian.md/t/bullet-lines-in-css-for-checkboxes/6262/3 */
+.contains-task-list::before { left: 10px ; }
+/** ...... 2.1.3 Better Bullet Points In Edit Mode https://forum.obsidian.md/t/clutter-free-edit-mode/6791/30 */
+div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-formatting-list-ul {
+  color: transparent;
+  position: relative;
+}
+div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-formatting-list-ul:after {
+  content: "•";
+  position: absolute;
+  top: -6px;
+  left: 4px;
+  color: var(--bright-aqua);
+  font-family: sans-serif;
+  font-size: 20px;
+}
+/** ...... 2.1.4 Bullet points in preview -- https://discord.com/channels/686053708261228577/702656734631821413/772094128832905226 */
+ul,
+ul ul,
+ol ul,
+ul ul ul,
+ol ul ul {
+  list-style: none;
+}
+li > p {
+  display: inline-block;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+ul li:not(.task-list-item)::before {
+  content: '•';
+  color: var(--bright-aqua);
+  display: inline-block;
+  width: 1em;
+  margin-left: -1.15em;
+  padding: 0;
+  font-weight: bold;
+  text-shadow: 0 0 0.5em var(--bright-aqua);
+}
+ul ul li:not(.task-list-item)::before {
+  content: '•';
+}
+ul ul ul li:not(.task-list-item)::before {
+  content: '•';
+}
+/** ...... 2.1.5 Bullet List Boxing -- https://discord.com/channels/686053708261228577/702656734631821413/784610806561636413 */
+/* 
+* { list-style: none;}
+ul li:not(.task-list-item) {
+  margin-left: 15px;
+  position: relative;
+  padding-left: 5px;
+  padding: 5px;
+  list-style-position: ;
+  border-left: 5px solid var(--faded-aqua);
+  box-shadow: 0 0 0 0.5px var(--bright-aqua);
+  border-radius: 10px;
+}
+ol {
+  counter-reset: cupcake;
+  padding-left: 5px;
+}
+ol li {
+  counter-increment: cupcake;
+  margin-left: 15px;
+  position: relative;
+  padding-left: 5px;
+  list-style-position: inside;
+  border-left: 5px solid var(--faded-aqua);
+  box-shadow: 0 0 0 0.5px var(--bright-aqua);
+  border-radius: 10px;
+}
+ol li:before {
+  content: counters(cupcake, '.') '  ';
+  color: var(--bright-green);
+  font-weight: bold;
+  display: inline-block;
+  white-space: pre;
+}
+.markdown-preview-view .collapse-indicator {
+  margin-left: -46px;
+  padding: 0 18px;
+}
+.markdown-preview-view .heading-collapse-indicator {
+  margin-left: -25px;
+  padding: 0 8px;
+}
+div.heading-collapse-indicator.collapse-indicator.collapse-icon:hover{
+  color: var(--text-accent);
+}
+.markdown-preview-section:not(.is-collapsed) svg.right-triangle{
+  color: var(--text-accent);
+}
+div.collapsible-item-collapse.collapse-icon{
+  color: var(--text-accent);
+} */
+/** .... 2.2 File Navigation Pane */
+/** ...... 2.2.1 Relationship lines for the folder levels in file navigation: https://forum.obsidian.md/t/meta-post-common-css-hacks/1978/112 */
+.outline .collapsible-item-children {
+  margin-left: 20px;
+  border-left: 1px solid var(--faded-aqua);
+  border-radius: 4px;
+  transition:all 0.5s ease-in-out;
+}
+.outline .collapsible-item-children:hover {
+  border-left-color: var(--faded-aqua);
+}
+.nav-folder-children .nav-folder-children {
+  margin-left: 20px;
+  padding-left: 0;
+  border-left: 1px solid var(--faded-aqua);
+  border-radius: 4px;
+  transition:all 0.5s ease-in-out;
+}
+.nav-folder-children .nav-folder-children:hover {
+  border-left-color: var(--faded-aqua);
+}
+/** ...... 2.2.2 Custom icons differing files and folders: https://discordapp.com/channels/686053708261228577/702656734631821413/755293685046050896 */
+/* Emoji */
+/*.nav-file-title-content::before { content: '🗒 '; }
+.nav-folder-title-content::before { content: '📂 '; }
+*/
+
+/* Flat font */
+/* Requires: https://icomoon.io/#icons-icomoon/liga-font */
+.nav-folder-children .nav-file-title-content:first-child::before {
+  content: "\e924  ";
+  font-family: "IcoMoon-Free";
+}
+.nav-folder-children .nav-folder-title-content::before {
+  content: "\e930  ";
+  font-family: "IcoMoon-Free";
+}
+/** ........ 2.2.3 Top Level Folder Icons -- https://discord.com/channels/686053708261228577/702656734631821413/805318111917113354 */
+.nav-folder-title[data-path="+Medium"] .nav-folder-title-content::before {
+  content: "📜️ ";
+  font-size:1.3em;
+}
+.nav-folder-title[data-path="+Newsletter"] .nav-folder-title-content::before {
+  content: "📰️ ";
+  font-size:1.3em;
+}
+.nav-folder-title[data-path="+YouTube"] .nav-folder-title-content::before {
+  content: "🔴️ ";
+  font-size:1.3em;
+}
+.nav-folder-title[data-path="Journal"] .nav-folder-title-content::before {
+  content: "📅 ";
+  font-size:1.3em;
+}
+.nav-folder-title[data-path="Log"] .nav-folder-title-content::before {
+  content: "📅 ";
+  font-size:1.3em;
+}
+.nav-folder-title[data-path="Media"] .nav-folder-title-content::before {
+  content: "🖼️ ";
+  font-size:1.3em;
+}
+.nav-folder-title[data-path="Templates"] .nav-folder-title-content::before {
+  content: "⚙️ ";
+  font-size:1.3em;
+}
+.nav-folder-title[data-path="Ancestry"] .nav-folder-title-content::before {
+  content: "🌳️ ";
+  font-size:1.3em;
+}
+.nav-folder-title[data-path="CRM"] .nav-folder-title-content::before {
+  content: "📇️ ";
+  font-size:1.3em;
+}
+/** .... 2.3 Clutter Free Mode */
+/** ...... 2.3.1 Make subtler folding gutter arrows -- https://forum.obsidian.md/t/meta-post-common-css-hacks/1978/10 */
+.CodeMirror-foldgutter-folded:after,
+.CodeMirror-foldgutter-open:after {
+  opacity: 0.5;
+  font-size: 60%;
+  color: var(--bright-aqua);
+}
+.CodeMirror-foldgutter-folded:hover:after,
+.CodeMirror-foldgutter-open:hover:after {
+  opacity: 1;
+}
+.CodeMirror-foldgutter-folded:after {
+  content: "\25BA";
+}
+.CodeMirror-foldgutter-open:after {
+  content: "\25BC";
+}
+/** ...... 2.3.2 Hide Block Reference ID's -- https://discord.com/channels/686053708261228577/716028884885307432/769267134114037871 */
+div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-blockid {
+  visibility: hidden;
+}
+.cm-blockid::first-letter
+{
+  visibility: visible;
+  font-weight: 800;
+}
+/** ...... 2.3.3 Shortened Url Links -- https://forum.obsidian.md/t/hide-or-truncate-urls-in-editor-using-css/359/3 */
+div:not(.CodeMirror-activeline) > .CodeMirror-line .cm-string.cm-url:not(.cm-formatting) {
+  font-size: 0;
+}
+div:not(.CodeMirror-activeline) > .CodeMirror-line .cm-string.cm-url:not(.cm-formatting)::after {
+  content: '🔗';
+  font-size: 1rem;
+}
+/** ...... 2.3.4 highlight (==) not visible anymore if not active line -- https://forum.obsidian.md/t/meta-post-common-css-hacks/1978/221 */
+div:not(.CodeMirror-activeline) > .CodeMirror-line .cm-formatting-highlight.cm-highlight {
+  font-size: 1em;
+  color: transparent;
+}
+/** ...... 2.3.5 Make code blocks wrap in preview mode too */
+.theme-dark code[class*="language-"], .theme-dark pre[class*="language-"], .theme-light code[class*="language-"], .theme-light pre[class*="language-"] {
+  word-wrap: break-word !important;
+  white-space: pre-wrap !important;
+}
+/** ........ 2.3.6 Hide search query title and stop highlighting found element -- https://forum.obsidian.md/t/meta-post-common-css-hacks/1978/307 */
+.markdown-preview-view .internal-query.is-embed .internal-query-header {
+   	display: none;
+}
+
+.search-result-file-matched-text {
+    color: inherit;
+    background-color: inherit;
+}
+/** ________ 2.3.7 vertically centre line numbers in large paragraphs -- https://discord.com/channels/686053708261228577/702656734631821413/822257712825237524 */
+/* .CodeMirror-gutter-wrapper { height:100%; }
+.CodeMirror-gutter-elt { top:0; }
+.cm-s-obsidian .CodeMirror-linenumber{ height: 100%; }
+.cm-s-obsidian .CodeMirror-linenumber::before {
+  content: "";
+  height: calc(50% - 1em);
+  display: block;
+} */
+/** ________ 2.3.8 Fix padding of transcluded blocks in lists */
+.markdown-preview-view .markdown-embed-content > .markdown-preview-view {
+  max-height: 800px;
+  padding-left: 25px;
+}
+/** .... 2.4 Font Formatting */
+/** ...... 2.4.1 Make Mathjax Font Larger */
+.MJX-TEX {
+  font-size: 180%;
+}
+/** ...... 2.4.2 Hyphenation & Justification     https://forum.obsidian.md/t/meta-post-common-css-hacks/1978/25 */
+.cm-s-obsidian,
+.markdown-preview-view {
+  text-align: justify;
+  hyphens: auto;
+}
+/** ...... 2.4.3 Stylish Block Quotes -- https://forum.obsidian.md/t/meta-post-common-css-hacks/1978/39 */
+blockquote:before {
+  font: 14px/20px italic Times, serif;
+  content: "“";
+  color: var(--faded-purple);
+  font-size: 3em;
+  line-height: 0.1em;
+  vertical-align: -0.4em;
+}
+blockquote p {
+  display: inline;
+}
+/** ...... 2.4.4 General Font Formatting */
+b, strong, .cm-s-obsidian .cm-strong{
+  color: var(--bright-red) !important;
+}
+i, em, span.cm-em {
+  color: var(--bright-green) !important;
+}
+u {
+  color: var(--bright-purple) !important;
+}
+del {
+  color: var(--gray);
+}
+sup, sub {
+  color: var(--neutral-yellow);
+}
+/** ...... 2.4.5 Stylish Signatures -- https://discord.com/channels/686053708261228577/702656734631821413/784210155923177552 */
+.signature {
+  font-family: Ananda; /* Font that had to be downloaded from dafont.com */
+  text-align: right;
+  padding-left: 40px;
+  padding-top: 10px;
+  color: var(--bright-purple)
+}
+/** .... 2.5 Graph Formatting */
+/** ...... 2.5.1 Graph View CSS -- https://discordapp.com/channels/686053708261228577/702656734631821413/760488978691784705 */
+.theme-dark .graph-view.color-arrow {
+  color: var(--bright-aqua);
+}
+.theme-dark .graph-view.color-fill-tag {
+  color: var(--bright-yellow);
+}
+.theme-dark .graph-view.color-fill-attachment {
+  color: var(--neutral-blue);
+}
+.theme-dark .graph-view.color-fill-unresolved {
+  color: var(--bright-red);
+}
+.graph-view.color-fill {
+  color: var(--light1);
+}
+/* .graph-view.color-line {
+  color: var(--gray);
+}*/
+/** .... 2.6 Image Manipulation */
+/** ...... 2.6.1 Image Hover Grow -- https://forum.obsidian.md/t/meta-post-common-css-hacks/1978/29 */
+.markdown-preview-view img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  transition: transform 0.25s ease;
+}
+/*   margin-top: 20pt;
+  margin-bottom: 20pt; */
+
+.markdown-preview-view img:hover {
+  -webkit-transform: scale(1.8);
+  transform: scale(2);
+}
+/** .... 2.7 Check Boxes */
+/** ...... 2.7.1 Nicer Round Checkboxes -- https://forum.obsidian.md/t/meta-post-common-css-hacks/1978/34 */
+/* input[type="checkbox"],
+.cm-formatting-task {
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: 50%;
+  border: 1px solid var(--text-faint);
+  padding: 0;
+  vertical-align: top;
+}
+.cm-s-obsidian span.cm-formatting-task {
+  color: transparent;
+  width: 1.25em !important;
+  height: 1.25em;
+  display: inline-block;
+}
+input[type="checkbox"]:focus {
+  outline: 0;
+}
+input[type="checkbox"]:checked,
+.cm-formatting-task.cm-property {
+  background-color: var(--text-accent-hover);
+  border: 1px solid var(--text-accent-hover);
+  background-position: center;
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-image: url('data:image/svg+xml; utf8, <svg width="12px" height="10px" viewBox="0 0 12 8" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-4.000000, -6.000000)" fill="%23ffffff"><path d="M8.1043257,14.0367999 L4.52468714,10.5420499 C4.32525014,10.3497722 4.32525014,10.0368095 4.52468714,9.8424863 L5.24777413,9.1439454 C5.44721114,8.95166768 5.77142411,8.95166768 5.97086112,9.1439454 L8.46638057,11.5903727 L14.0291389,6.1442083 C14.2285759,5.95193057 14.5527889,5.95193057 14.7522259,6.1442083 L15.4753129,6.84377194 C15.6747499,7.03604967 15.6747499,7.35003511 15.4753129,7.54129009 L8.82741268,14.0367999 C8.62797568,14.2290777 8.3037627,14.2290777 8.1043257,14.0367999"></path></g></g></svg>');
+} */
+/** ...... 2.7.2 Animated Check Boxes -- https://github.com/TriDiamond/Obsidian-Obsidianite/blob/82207bed4313ee0e6f0bb1fd59b04129408018f5/obsidian.css#L463 */
+
+.contains-task-list .task-list-item .contains-task-list {
+  padding-inline-start: 5px;
+}
+
+.contains-task-list .task-list-item ul.contains-task-list::before {
+  left: -46px !important;
+  border-width: 2px;
+}
+
+.contains-task-list .task-list-item {
+  position: relative;
+  vertical-align: middle;
+  box-sizing: border-box;
+  padding-left: 30px;
+}
+
+.contains-task-list .task-list-item input[type='checkbox'] {
+  position: absolute;
+  top: 4px;
+  left: -23px;
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  opacity: 0;
+  z-index: 10;
+}
+
+.markdown-preview-view .list-collapse-indicator {
+  margin-left: -80px !important;
+  box-sizing: border-box;
+}
+
+.contains-task-list .task-list-item::before {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: -25px;
+  width: 20px;
+  height: 20px;
+  display: inline-flex;
+  justify-content: center;
+  border: 2px solid var(--neutral-blue);
+  margin-right: 15px;
+  border-radius: 10px;
+  transition: all 0.3s;
+  box-sizing: border-box;
+  z-index: 1;
+}
+
+.contains-task-list .is-checked.task-list-item::before {
+  border: 10px solid var(--neutral-purple);
+  animation: bounce 300ms;
+}
+
+.contains-task-list .is-checked.task-list-item::after {
+  content: '';
+  position: absolute;
+  top: 8px;
+  left: -21px;
+  border-right: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+  transform: rotate(45deg);
+  transform-origin: 0% 100%;
+  animation: checked-box 125ms 250ms forwards;
+  z-index: 5;
+}
+
+.markdown-preview-view ul > li.task-list-item.is-checked {
+  text-decoration: line-through !important;
+  color: var(--gray) !important;
+}
+
+.markdown-preview-view ul > li.task-list-item.is-checked ul > li:not(.is-checked) {
+  text-decoration: none !important;
+  color: var(--text-normal) !important;
+}
+
+@keyframes checked-box {
+  0% {
+    width: 0;
+    height: 0;
+    border-color: #FFFFFF;
+    transform: translate(0, 0) rotate(45deg);
+  }
+  33% {
+    width: 4px;
+    height: 0;
+    border-color: #FFFFFF;
+    transform: translate(0, 0) rotate(45deg);
+  }
+  100% {
+    width: 4px;
+    height: 8px;
+    border-color: #FFFFFF;
+    transform: translate(0, -8px) rotate(45deg);
+  }
+}
+
+@keyframes bounce {
+  0% {
+    border-width: 2px;
+  }
+  33% {
+    border-width: 4px;
+  }
+  100% {
+    border-width: 10px;
+  }
+}
+/** ________ 2.7.3 Hide Completed Tasks In Preview -- https://forum.obsidian.md/t/hide-checked-todo-s/14043 */
+.markdown-preview-view ul > li.task-list-item.is-checked {
+  display: none;
+}
+/** .... 2.8 Tags */
+/** ...... 2.8.1 Tag Pills -- https://forum.obsidian.md/t/meta-post-common-css-hacks/1978/72 */
+.tag:not(.token) {
+  background-color: var(--faded-blue);
+  border: none;
+  color: white;
+  font-size: 14px;
+  padding: 0px 8px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 0px 0px;
+  cursor: pointer;
+  border-radius: 14px;
+  font-weight: bold;
+}
+.tag:not(.token):hover {
+  color: var(--bright-red) !important;
+  background-color: var(--bright-red);
+}
+.tag[href^="#📥️"] {
+  background-color: var(--light4);
+  color: var(--light4) !important;
+}
+.tag[href^="#🌱️"] {
+  background-color: var(--faded-aqua);
+  color: var(--faded-aqua) !important;
+}
+.tag[href^="#🌞️"] {
+  background-color: var(--faded-aqua);
+  color: var(--faded-aqua) !important;
+}
+.tag[href^="#🌲️"] {
+  background-color: var(--faded-aqua);
+  color: var(--faded-aqua) !important;
+}
+.tag[href^="#✏"] {
+  background-color: var(--faded-blue);
+  color: var(--faded-blue) !important;
+}
+.tag[href^="#✅️"] {
+  background-color: var(--bright-orange);
+  color: var(--bright-orange) !important;
+}
+.tag[href^="#🗺️"] {
+  background-color: var(--bright-yellow);
+  color: var(--bright-yellow) !important;
+}
+.tag[href^="#⚙️"] {
+  background-color: var(--dark3);
+  color: var(--dark3) !important;
+}
+.tag[href^="#❗️"] {
+  background-color: var(--light1);
+  color: var(--light1) !important;
+}
+/** ________ 2.8.2 Tags to the side of the document -- https://forum.obsidian.md/t/meta-post-common-css-hacks/1978/327 */
+/* Requires the core setting "Readable Line Length" to be on */
+/* p > a.tag {
+  font-size: 0;
+  width: 0;
+  padding: 0;
+  margin: 0;
+  background: none;
+  text-decoration: none;
+  border: none;
+}
+p > a.tag::before {
+  content: 'Ꚛ';
+  font-size: 16px;
+  color: var(--bright-purple) ;
+}
+
+p > a.tag::after {
+  content: attr(href);
+  float: right;
+  min-width: 3ch;
+  max-width: 25%;
+  margin-right: calc(-25% - 1.5em);
+  margin-left: calc(-25% - 1.5em);
+  position: relative;
+  clear: right;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-size: 20px;
+}
+
+p > a.tag:hover::after {
+  max-width: fit-content !important;
+}  */
+/** .... 2.9 [[Link]] Modification */
+/** ...... 2.9.1 Bigger Link Hover Popup Preview -- https://forum.obsidian.md/t/meta-post-common-css-hacks/1978/175 */
+.popover.hover-popover {
+  transform: scale(0.8); /* makes the content smaller */
+  max-height: 800px;
+  min-height: 50px;
+  width: 700px;
+  overflow: overlay; /* new added */
+}
+.popover.hover-popover .markdown-embed  {
+  height: 100%;
+}
+.popover.hover-popover.is-loaded .markdown-embed .markdown-embed-content .markdown-preview-view{
+padding: 10px 10px 10px 16px; /*16px  two pop magin */
+}
+/** ........ 2.9.2 The modal popups from link hovers */
+.popover {
+  border: 2px solid var(--bright-aqua);
+}
+/** ...... 2.10.1 Calendar Plugin CSS */
+#clendar-container {
+  --color-background-heading: transparent;
+  --color-background-weeknum: transparent;
+  --color-background-weekend: transparent;
+  --color-background-day: transparent;
+  --color-background-day-empty: var(--background-secondary-alt);
+  --color-background-day-active: var(--interactive-accent);
+  --color-background-day-hover: var(--interactive-hover);
+  
+  --color-dot: var(--bright-aqua);
+  
+  --color-text-weeknum: var(--bright-aqua);
+  --color-text-title: var(--text-normal);
+  --color-text-heading: var(--text-normal);
+  --color-text-day: var(--text-normal);
+  --color-text-today: var(--text-accent);
+  --color-arrow: var(--bright-aqua);
+  --color-button: var(--text-muted);
+}
+#calendar-container .year {
+  color: var(--bright-orange);
+}
+#calendar-container [data-emoji-tag]::after {
+  content: attr(data-emoji-tag);
+  position: absolute;
+  top: -4px;
+  right: 4px;
+  height: 8px;
+  width: 8px;
+}
+/** ________ 2.10.2 T0DOIST Plugin CSS -- https://github.com/jamiebrynes7/clair-de-lune-obsidian-theme/blob/master/src/modules/extensions/todoist.scss */
+/* Additional Link -- */
+/* .todoist-query-title {
+  display: inline !important;
+}
+
+.todoist-refresh-button {
+  display: inline;
+  float: right;
+  margin-left: 8px;
+  padding: 3px 10px;
+  background-color: var(--dark2);
+}
+
+.todoist-refresh-button:hover {
+  background-color: var(--dark4);
+}
+
+.todoist-refresh-spin {
+  -webkit-animation: spin 1s linear infinite;
+  animation: spin 1s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+.markdown-preview-view ul > li.task-list-item .todoist-p1 > input[type="checkbox"] {
+  border: 1px solid var(--bright-red) !important;
+  background-color: rgba(255, 0, 0, 0.25) !important;
+}
+
+.markdown-preview-view ul > li.task-list-item .todoist-p1 > input[type="checkbox"]:hover {
+  background-color: rgba(255, 0, 0, 0.5) !important;
+}
+
+.markdown-preview-view ul > li.task-list-item .todoist-p2 > input[type="checkbox"] {
+  border: 1px solid var(--bright-yellow) !important;
+  background-color: rgba(255, 255, 0, 0.25) !important;
+}
+
+.markdown-preview-view ul > li.task-list-item .todoist-p2 > input[type="checkbox"]:hover {
+  background-color: rgba(255, 255, 0, 0.5) !important;
+}
+
+.markdown-preview-view ul > li.task-list-item .todoist-p3 > input[type="checkbox"] {
+  border: 1px solid var(--bright-blue) !important;
+  background-color: rgba(0, 0, 255, 0.25) !important;
+}
+
+.markdown-preview-view ul > li.task-list-item .todoist-p3 > input[type="checkbox"]:hover {
+  background-color: rgba(0, 0, 255, 0.5) !important;
+}
+
+.markdown-preview-view ul > li.task-list-item .todoist-p4 > input[type="checkbox"] {
+  border: 1px solid var(--dark4) !important;
+  background-color: rgba(128, 128, 128, 0.25) !important;
+}
+
+.markdown-preview-view ul > li.task-list-item .todoist-p4 > input[type="checkbox"]:hover {
+  background-color: rgba(128, 128, 128, 0.5) !important;
+}
+
+.task-metadata {
+  font-size: var(--font-todoist-metadata-size);
+  color: var(--bright-aqua);
+}
+
+.task-metadata > * {
+  margin-right: 30px;
+}
+
+.task-date.task-overdue {
+  color: var(--bright-red); 
+}
+
+.task-calendar-icon,
+.task-project-icon,
+.task-labels-icon {
+  vertical-align: middle;
+  height: 17px;
+  width: 17px;
+}
+
+.task-labels-icon {
+  color: var(--bright-green);
+}
+.task-labels {
+  color: var(--bright-purple);
+}
+.task-project-icon {
+  color: var(--bright-blue);
+}
+.task-project {
+  color: var(--bright-blue);
+}
+
+.todoist-project .todoist-project {
+  margin-left: 20px;
+}
+
+.todoist-section {
+  margin-left: 20px;
+}
+
+.todoist-project .todoist-project-title {
+  font-weight: 700;
+  -webkit-margin-after: 0px;
+  margin-block-end: 0px;
+}
+
+.todoist-section .todoist-section-title {
+  font-size: var(--font-todoist-title-size);
+  font-weight: 700;
+  -webkit-margin-after: 0px;
+  margin-block-end: 0px;
+}
+
+.todoist-error {
+  border: 1px solid var(--bright-red);
+  background-color: rgba(255, 0, 0, 0.05);
+  padding: 1em 1em;
+  margin: 1em 0px;
+}
+
+.todoist-error p {
+  margin: 0 0 1em 0;
+  font-weight: 600;
+}
+
+.todoist-error code {
+  background-color: unset !important;
+  padding: unset !important;
+  margin: unset !important;
+} */
+/** ________ 2.10.3 DayPlanner Plugin CSS */
+/* .event_item_color1 {
+  background-color: var(--neutral-aqua) !important;
+}
+
+.event_item_color2 {
+  background-color: var(--neutral-blue) !important;
+}
+
+.event_item_color3 {
+  background-color: var(--neutral-green) !important;
+}
+
+.event_item_color4 {
+  background-color: var(--neutral-orange) !important;
+}
+
+.event_item_color5 {
+  background-color: var(--neutral-purple) !important;
+}
+
+.event_item_color6 {
+  background-color: var(--neutral-red) !important;
+}
+
+.event_item_color7 {
+  background-color: var(--neutral-yellow) !important;
+}
+
+.event_item_color8 {
+  background-color: var(--neutral-aqua) !important;
+}
+
+.event_item_color9 {
+  background-color: var(--neutral-blue) !important;
+}
+
+.event_item_color10 {
+  background-color: var(--neutral-green)!important;
+} */
+/** ________ 2.10.4 Folder Note CSS */
+/* .strip-card-view .thumb-color-folder {
+  background-color: var(--faded-purple) !important;
+  color: var(--light1) !important;
+}
+.strip-card-view .thumb-color-note {
+  background-color: var(--faded-red) !important;
+  color: var(--light1) !important;;
+}
+.strip-card-view span {
+  color: var(--faded-green) !important;
+}
+.strip-card-view p {
+  color: var(--gray) !important; 
+} */
+/** .... 2.11 Heading Formatting */
+/** ...... 2.11.1 Heading Under Gradient Line -- https://github.com/TriDiamond/Obsidian-Obsidianite */
+/* .markdown-preview-view h1,
+.markdown-preview-view h2,
+.markdown-preview-view h3,
+.markdown-preview-view h4,
+.markdown-preview-view h5,
+.markdown-preview-view h6 {
+  position: relative;
+}
+.markdown-preview-view h1:after,
+.markdown-preview-view h2:after,
+.markdown-preview-view h3:after,
+.markdown-preview-view h4:after,
+.markdown-preview-view h5:after,
+.markdown-preview-view h6:after {
+  position: absolute;
+  content: '';
+  height: 1px;
+  width: 35%;
+  left: 0;
+  bottom: -0.2rem;
+  background-image: linear-gradient(to right, var(--bright-aqua), var(--background-primary)) ;
+  opacity: 1;
+} */
+/** ...... 2.11.2 Emoji Orientation in Andy Mode Headers -- https://discord.com/channels/686053708261228577/702656734631821413/775900471406624768 */
+body.plugin-sliding-panes-rotate-header .workspace > .mod-root .view-header {
+  text-orientation: sideways;
+}
+/** ........ 2.11.3 Heading Horizontal Lines -- https://forum.obsidian.md/t/meta-post-common-css-hacks/1978/288?u=tallguyjenks */
+h1,h2,h3,h4,h5,h6 {
+	display: flex;
+	width: 100%;
+	align-items: center;
+}
+h1:before, h1:after, 
+h2:before, h2:after, 
+h3:before, h3:after, 
+h4:before, h4:after, 
+h5:before, h5:after, 
+h6:before, h6:after {
+	content: '';
+	background: var(--bright-aqua);
+	height: .1em;
+	margin: .2em;
+	flex: 1;
+}
+/** .... 2.12 Horizontal Rule Formatting */
+/** ...... 2.12.1 Aesthetic Horizontal Rule -- https://github.com/TriDiamond/Obsidian-Obsidianite */
+
+.markdown-preview-view hr {
+  margin-block-start: 4em;
+  margin-block-end: 4em;
+  border: none;
+  height: 1px;
+  background-image: linear-gradient(to right, var(--background-primary), var(--text-accent), var(--background-primary));
+}
+
+.markdown-preview-view hr::after {
+  /* content: '§'; */
+  content: 'ᛟ';
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  /* transform: translate(-50%, -50%) rotate(60deg); */
+  transform: translate(-50%, -50%) rotate(0deg);
+  transform-origin: 50% 50%;
+  padding: 0.5rem;
+  color: var(--bright-aqua);
+  background-color: var(--background-primary);
+}
+/** ...... 2.13.1 Page Break -- https://gist.github.com/liamcain/81679412643690a7cdd13dff4dc909ce */
+@media print {
+  /* pagebreak before all ## headings */
+  h2 {
+    page-break-before: always;
+  }
+
+  h3,
+  h4 {
+    page-break-after: avoid;
+  }
+
+  pre,
+  blockquote {
+    page-break-inside: avoid;
+  }
+
+  /* use double <hr> ('---') to indicate a page break */
+  hr + hr {
+    page-break-before: always;
+    visibility: hidden;
+  }
+
+  :not(hr) + hr {
+    visibility: hidden;
+  }
+
+  :not(hr) + hr + :not(hr):not(h2) {
+    border-top: 1px solid black;
+    padding-top: 2em;
+  }
+}
+/** ...... 2.14.1 Banded Table Rows -- https://discord.com/channels/686053708261228577/702656734631821413/777106171948564500 */
+table {
+  padding: 0;
+  word-break: initial;
+}
+
+table tr {
+  border-top: 1px solid #cccccc;
+  margin: 0;
+  padding: 0;
+}
+
+table tr:nth-child(2n) {
+  background-color: var(--dark1);
+}
+
+table tr th {
+  font-weight: bold;
+  border: 1px solid #cccccc;
+  text-align: left;
+  margin: 0;
+  padding: 6px 13px;
+}
+
+table tr td {
+  border: 1px solid #cccccc;
+  text-align: left;
+  margin: 0;
+  padding: 6px 13px;
+}
+
+table tr th:first-child,
+table tr td:first-child {
+  margin-top: 0;
+}
+
+table tr th:last-child,
+table tr td:last-child {
+  margin-bottom: 0;
+}
+/** .... 2.15 Custom HTML Elements */
+/** ...... 2.15.1 aside format -- https://discord.com/channels/686053708261228577/707816848615407697/784964375806083124 */
+aside {
+  width: 40%;
+  padding-left: .5rem;
+  margin-left: 1rem;
+  margin-top: .5rem;
+  float: right;
+  box-shadow: inset 5px 0 5px -5px var(--faded-blue);
+  font-style: italic;
+  color: var(--faded-blue);
+}
+
+aside > p {
+  margin: .5rem;
+}
+/** ...... 2.15.2 Buttons -- https://discord.com/channels/686053708261228577/744933215063638183/784289179328708648 */
+.date_button_today {
+  background-color: var(--neutral-aqua);
+  font-weight: bold;
+  margin-right: 0%;
+}
+.date_button_today:hover {
+  background-color: var(--faded-aqua);
+}
+.date_button {
+  background-color: var(--dark1);
+}
+.date_button:hover {
+  background-color: var(--dark3);
+}
+/** ________ 2.15.3 Definition Lists */
+dt {
+  color: var(--neutral-yellow);
+  font-weight: bold;
+}
+dd {
+  color: var(--faded-yellow);
+  font-style: italic;
+}
+dd::before { 
+  content: '├── ';
+  margin-left: -1.5em;
+  color: var(--neutral-orange);
+  font-style: normal; 
+}
+dd:last-child::before { 
+  content: '└── ';
+  margin-left: -1.5em;
+  color: var(--neutral-orange);
+  font-style: normal;
+}
+/** ________ 2.15.4 Code Language Fences -- https://discord.com/channels/686053708261228577/702656734631821413/822915125522202654 */
+
+/* Informational Code Fences */
+.theme-dark /*replace with dark if needed*/ div pre.language-info { /*replace info with anything you like*/
+  background-color: var(--background-primary); /*you can replace with any colour you want here*/
+  border-left: 1em solid var(--neutral-blue); /*replace this colour with anything you like*/
+  padding-top: 0;
+}
+
+pre.language-info::before { /*replace info with anything you like*/
+margin-bottom:0.9em;
+margin-left: -1em; /*based on default padding of obsidian, you may need to adjust depending on the theme you use*/
+margin-right: -1em; 
+position: static;
+display: block;
+background-color: var(--background-secondary); /*replace this colour with anything you like*/
+content:"  ℹ️ Info"; /*replace this content with anything you like*/
+}
+
+/* JavaScript */
+.theme-dark /*replace with dark if needed*/ div pre.language-javascript { /*replace info with anything you like*/
+  background-color: var(--background-primary); /*you can replace with any colour you want here*/
+  border-left: 1em solid var(--neutral-yellow); /*replace this colour with anything you like*/
+  padding-top: 0;
+}
+
+pre.language-javascript::before { /*replace info with anything you like*/
+margin-bottom:0.9em;
+margin-left: -1em; /*based on default padding of obsidian, you may need to adjust depending on the theme you use*/
+margin-right: -1em; 
+position: static;
+display: block;
+background-color: var(--neutral-yellow); /*replace this colour with anything you like*/
+content:"    JavaScript"; /*replace this content with anything you like*/
+color: var(--background-secondary);
+font-weight: bold;
+}
+
+/* HTML */
+.theme-dark /*replace with dark if needed*/ div pre.language-html { /*replace info with anything you like*/
+  background-color: var(--background-primary); /*you can replace with any colour you want here*/
+  border-left: 1em solid var(--neutral-orange); /*replace this colour with anything you like*/
+  padding-top: 0;
+}
+
+pre.language-html::before { /*replace info with anything you like*/
+margin-bottom:0.9em;
+margin-left: -1em; /*based on default padding of obsidian, you may need to adjust depending on the theme you use*/
+margin-right: -1em; 
+position: static;
+display: block;
+background-color: var(--neutral-orange); /*replace this colour with anything you like*/
+content:"    HTML"; /*replace this content with anything you like*/
+color: var(--background-secondary);
+font-weight: bold;
+}
+
+/* CSS */
+.theme-dark /*replace with dark if needed*/ div pre.language-css { /*replace info with anything you like*/
+  background-color: var(--background-primary); /*you can replace with any colour you want here*/
+  border-left: 1em solid var(--neutral-blue); /*replace this colour with anything you like*/
+  padding-top: 0;
+}
+
+pre.language-css::before { /*replace info with anything you like*/
+margin-bottom:0.9em;
+margin-left: -1em; /*based on default padding of obsidian, you may need to adjust depending on the theme you use*/
+margin-right: -1em; 
+position: static;
+display: block;
+background-color: var(--neutral-blue); /*replace this colour with anything you like*/
+content:"    CSS"; /*replace this content with anything you like*/
+color: var(--background-secondary);
+font-weight: bold;
+}
+
+/* Git repurposed for pro/con */
+.theme-dark /*replace with dark if needed*/ div pre.language-git { /*replace info with anything you like*/
+  background-color: var(--background-primary); /*you can replace with any colour you want here*/
+  border-left: 1em solid var(--faded-green); /*replace this colour with anything you like*/
+  padding-top: 0;
+}
+
+pre.language-git::before { /*replace info with anything you like*/
+margin-bottom:0.9em;
+margin-left: -1em; /*based on default padding of obsidian, you may need to adjust depending on the theme you use*/
+margin-right: -1em; 
+position: static;
+display: block;
+background-color: var(--faded-green); /*replace this colour with anything you like*/
+content:"    Pro / Con"; /*replace this content with anything you like*/
+color: var(--background-secondary);
+font-weight: bold;
+}
+/** ________ 2.15.5 Rounded Edges of Inline Code blocks https://discord.com/channels/686053708261228577/702656734631821413/822181163639767081 */
+/* set text and colour of codeblock */
+.cm-s-obsidian span.cm-inline-code:not(.cm-formatting):not(.cm-hmd-indented-code):not(.obsidian-search-match-highlight) {
+  color: inherit;
+  background-color: var(--background-secondary);
+  padding: 2px 4px;
+}
+
+/* give rounded left edge to codeblock formatting*/
+span.cm-formatting.cm-formatting-code.cm-inline-code{
+  border-radius: 4px 0px 0px 4px;
+  background-color: var(--background-secondary);
+  color:inherit;
+  padding: 2px 4px;
+}
+
+/* give rounded right edge to codeblock formatting */
+span.cm-inline-code + span.cm-formatting.cm-formatting-code.cm-inline-code{
+  border-radius: 0px 4px 4px 0px;
+}
+/** ____ 2.16 Quick Switcher */
+/** ________ 2.16.1 Fix the quick switcher highligher after background color change */
+.suggestion-item.is-selected {
+  background-color: var(--faded-aqua);
+}
+/** .. 3. Grave Yard */
+/*--------------------------------------------------------------------------------------------------------------------------------------------*/
+/* Change color of internal links https://discordapp.com/channels/686053708261228577/702656734631821413/767572809848848385 */
+/*--------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/* .cm-s-obsidian span.cm-hmd-internal-link, a.internal-link {
+  color: var(--bright-orange) !important;
+} */
+
+/*--------------------------------------------------------------------------------------------------------------------------------------------*/
+/* Whitespace Characters */  /* https://forum.obsidian.md/t/editors-css-to-show-tabs-trailing-whitespace-and-strict-line-breaks/4234 */
+/*--------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/* .cm-trailing-space-new-line, .cm-trailing-space-a, .cm-trailing-space-b, .cm-tab{
+  font-size: 0;
+}
+.cm-trailing-space-a::before, .cm-trailing-space-b::before, .cm-trailing-space-new-line::before, .cm-tab::before{
+  content:'·';
+  color:var(--dark2);
+  font-size: initial;
+}
+.cm-trailing-space-new-line::before {
+  content:'↵';
+}
+.cm-tab::before {
+  content:'⟶'
+} */
+
+/*--------------------------------------------------------------------------------------------------------------------------------------------*/
+/* Remove blockquote left margin
+/*--------------------------------------------------------------------------------------------------------------------------------------------*/
+/*
+blockquote {
+    margin-inline-start: 0;
+} */
+
+/*--------------------------------------------------------------------------------------------------------------------------------------------*/
+/* Make Tags and Searched pages have expanded columns --- THIS MESSES WITH ANDY MODE */
+/*--------------------------------------------------------------------------------------------------------------------------------------------*/
+/*body > div > div.horizontal-main-container > div > div.workspace-split.mod-horizontal.mod-right-split > div:nth-child(4) > div.workspace-leaf > div > div > div,
+body > div > div.horizontal-main-container > div > div.workspace-split.mod-horizontal.mod-left-split > div.workspace-tabs > div.workspace-leaf > div > div.search-result-container.mod-global-search > div
+{
+    column-width:200px;
+}*/
+/* Expand List Column for file search (THIS MESSES WITH ANDY MODE): */
+/*.nav-folder-children
+{
+    column-width:200px;
+}*/
+
+/*--------------------------------------------------------------------------------------------------------------------------------------------*/
+/* Lime Light but only for body text */
+/*--------------------------------------------------------------------------------------------------------------------------------------------*/
+/*.cm-s-obsidian,
+.cm-s-obsidian div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-link,
+.cm-s-obsidian div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-hmd-internal-link,
+.cm-s-obsidian div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-url,
+.cm-s-obsidian div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-hmd-escape-backslash,
+.cm-s-obsidian div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-inline-code,
+.cm-s-obsidian div:not(.CodeMirror-activeline) > pre.CodeMirror-line.HyperMD-codeblock,
+.cm-s-obsidian div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-hashtag,
+.cm-s-obsidian div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-builtin,
+.cm-s-obsidian div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-hr,
+.cm-s-obsidian div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-footref,
+.cm-s-obsidian div:not(.CodeMirror-activeline) > .CodeMirror-line pre.HyperMD-footnote span.cm-hmd-footnote,
+.cm-s-obsidian div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-formatting-highlight,
+.cm-s-obsidian div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-highlight,
+.cm-s-obsidian div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-formatting-list,
+.cm-s-obsidian div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-formatting-task,
+.cm-s-obsidian div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-quote,
+.cm-s-obsidian div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-math,
+.cm-s-obsidian div:not(.CodeMirror-activeline) > .CodeMirror-line span.hmd-fold-math-placeholder {
+  color: var(--dark2);
+}
+.cm-s-obsidian div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-formatting-highlight,
+.cm-s-obsidian div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-highlight {
+  background-color: transparent;
+}
+.CodeMirror-activeline {
+  color: var(--light1);
+}*/
+
+/*--------------------------------------------------------------------------------------------------------------------------------------------*/
+/* WYSIWYG Editor Features From: https://discordapp.com/channels/686053708261228577/702656734631821413/749843052385796147 */
+/*--------------------------------------------------------------------------------------------------------------------------------------------*/
+/* inline formatting, link targets and [[ ]] disappears if not active line
+div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-formatting,
+div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-string.cm-url,
+div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-formatting-link
+{ display: none; } */
+/* hide all html tags -- IT IS COMMENTED OUT BY DEFAULT
+div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-tag{ display: none; }*/
+/* optionally header hashes  span.cm-formatting-header,
+/* except list markers  span.cm-formatting-list,
+/* code block backticks span.cm-formatting-code-block.cm-hmd-codeblock
+{
+    display: inline !important;
+}*/
+/* and task checkboxes
+span.cm-formatting-task { display: inline !important; font-family: monospace; }
+*/
+
+/*--------------------------------------------------------------------------------------------------------------------------------------------*/
+/* replace H1-H6 markup in edit mode: https://discordapp.com/channels/686053708261228577/702656734631821413/753842312882159687
+/*--------------------------------------------------------------------------------------------------------------------------------------------*/
+/* .CodeMirror-sizer {
+  margin-left: 48px !important;
+} */
+/*-- reduce left padding --*/
+/* .CodeMirror {
+  height: 100%;
+  direction: ltr;
+  padding: 0 10px;
+} */
+/*-- header color --*/
+/* .cm-header.cm-header-1 {
+  color: var(--text-accent);
+  left: 0px;
+  position: relative;
+} */
+/* .cm-header.cm-header-2 {
+  color: var(--text-accent2);
+  left: 0px;
+  position: relative;
+} */
+/*-- hide # markup--*/
+/* .cm-formatting.cm-formatting-header.cm-formatting-header-1.cm-header.cm-header-1,
+.cm-formatting.cm-formatting-header.cm-formatting-header-2.cm-header.cm-header-2,
+.cm-formatting.cm-formatting-header.cm-formatting-header-3.cm-header.cm-header-3,
+.cm-formatting.cm-formatting-header.cm-formatting-header-4.cm-header.cm-header-4,
+.cm-formatting.cm-formatting-header.cm-formatting-header-5.cm-header.cm-header-5,
+.cm-formatting.cm-formatting-header.cm-formatting-header-6.cm-header.cm-header-6 {
+  font-size: 0px;
+}
+ */
+/*-- display H1-h6 in gutter--*/
+/* .cm-formatting.cm-formatting-header.cm-formatting-header-1.cm-header.cm-header-1:before {
+  content: "H1";
+  font-size: 34px;
+  color: var(--text-accent2);
+  left: -49px;
+  top: -50px;
+  position: absolute;
+}
+.cm-formatting.cm-formatting-header.cm-formatting-header-2.cm-header.cm-header-2:before {
+  content: "H2";
+  font-size: 26px;
+  color: var(--text-accent2);
+  left: -43px;
+  top: -35px;
+  position: absolute;
+}
+.cm-formatting.cm-formatting-header.cm-formatting-header-3.cm-header.cm-header-3:before {
+  content: "H3";
+  font-size: 22px;
+  color: var(--text-accent2);
+  left: -36px;
+  top: -6px;
+  position: absolute;
+}
+.cm-formatting.cm-formatting-header.cm-formatting-header-4.cm-header.cm-header-4:before {
+  content: "H4";
+  font-size: 20px;
+  color: var(--text-accent2);
+  left: -36px;
+  top: -6px;
+  position: absolute;
+}
+.cm-formatting.cm-formatting-header.cm-formatting-header-5.cm-header.cm-header-5:before {
+  content: "H5";
+  font-size: 18px;
+  color: var(--text-accent2);
+  left: -36px;
+  top: -6px;
+  position: absolute;
+}
+.cm-formatting.cm-formatting-header.cm-formatting-header-6.cm-header.cm-header-6:before {
+  content: "H6";
+  font-size: 16px;
+  color: var(--text-accent2);
+  left: -36px;
+  top: -4px;
+  position: absolute;
+} */
+
+/*-- is active line, hide H[1-6] in gutter --*/
+/* .CodeMirror-activeline
+  span.cm-formatting.cm-formatting-header.cm-formatting-header-1.cm-header.cm-header-1:before,
+.CodeMirror-activeline
+  span.cm-formatting.cm-formatting-header.cm-formatting-header-2.cm-header.cm-header-2:before,
+.CodeMirror-activeline
+  span.cm-formatting.cm-formatting-header.cm-formatting-header-3.cm-header.cm-header-3:before,
+.CodeMirror-activeline
+  span.cm-formatting.cm-formatting-header.cm-formatting-header-4.cm-header.cm-header-4:before,
+.CodeMirror-activeline
+  span.cm-formatting.cm-formatting-header.cm-formatting-header-5.cm-header.cm-header-5:before,
+.CodeMirror-activeline
+  span.cm-formatting.cm-formatting-header.cm-formatting-header-6.cm-header.cm-header-6:before {
+  font-size: 0px;
+} */
+/*-- is active line, display # markup --*/
+/* .CodeMirror-activeline
+  > pre
+  > span
+  .cm-formatting.cm-formatting-header.cm-formatting-header-1.cm-header.cm-header-1 {
+  font-size: 32px;
+  display: inline;
+}
+.CodeMirror-activeline
+  > pre
+  > span
+  .cm-formatting.cm-formatting-header.cm-formatting-header-2.cm-header.cm-header-2 {
+  font-size: 24px;
+  display: inline;
+}
+.CodeMirror-activeline
+  > pre
+  > span
+  .cm-formatting.cm-formatting-header.cm-formatting-header-3.cm-header.cm-header-3 {
+  font-size: 19px;
+  display: inline;
+}
+.CodeMirror-activeline
+  > pre
+  > span
+  .cm-formatting.cm-formatting-header.cm-formatting-header-4.cm-header.cm-header-4,
+.CodeMirror-activeline
+  > pre
+  > span
+  .cm-formatting.cm-formatting-header.cm-formatting-header-5.cm-header.cm-header-5,
+.CodeMirror-activeline
+  > pre
+  > span
+  .cm-formatting.cm-formatting-header.cm-formatting-header-6.cm-header.cm-header-6 {
+  font-size: 13px;
+  display: inline;
+} */
+
+/*--------------------------------------------------------------------------------------------------------------------------------------------
+NO HIGHLIGHT OR LINK MARKS WYSIWYG https://forum.obsidian.md/t/meta-post-common-css-hacks/1978/175
+--------------------------------------------------------------------------------------------------------------------------------------------*/
+/* div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-formatting-link:not(.cm-link),
+div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-formatting-highlight {
+    display: none !important;
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

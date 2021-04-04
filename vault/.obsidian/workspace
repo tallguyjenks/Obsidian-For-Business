@@ -1,0 +1,173 @@
+{
+  "main": {
+    "id": "eb181b07470c1c0d",
+    "type": "split",
+    "children": [
+      {
+        "id": "f7c4c4b93c6dfb40",
+        "type": "leaf",
+        "active": true,
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "START HERE.md",
+            "mode": "source"
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "f07cc7c77363b37d",
+    "type": "split",
+    "children": [
+      {
+        "id": "a87c3e1f58e4a8b2",
+        "type": "tabs",
+        "dimension": 20.362737015663644,
+        "children": [
+          {
+            "id": "a2acb5074f7ce2b3",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          },
+          {
+            "id": "b4921c3d7e704dde",
+            "type": "leaf",
+            "state": {
+              "type": "recent-files",
+              "state": {}
+            }
+          }
+        ]
+      },
+      {
+        "id": "f57dfc34e85e4fb8",
+        "type": "tabs",
+        "dimension": 79.63726298433636,
+        "children": [
+          {
+            "id": "e00e7aa5731c4c57",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "08c6b0686797bdde",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "dd3ed40e04074056",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 327.5121879577637
+  },
+  "right": {
+    "id": "28d109cd476080d4",
+    "type": "split",
+    "children": [
+      {
+        "id": "979514ecd4a5c3b3",
+        "type": "tabs",
+        "dimension": 38.49958779884584,
+        "children": [
+          {
+            "id": "932aa3c2de8b7bfe",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "START HERE.md"
+              }
+            }
+          },
+          {
+            "id": "c4e436e735bd3fdb",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {}
+            }
+          }
+        ],
+        "currentTab": 1
+      },
+      {
+        "id": "d2be447e58d035e4",
+        "type": "tabs",
+        "dimension": 61.500412201154155,
+        "children": [
+          {
+            "id": "982b5488f01ffaaf",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "START HERE.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "19630d4802194ef6",
+            "type": "leaf",
+            "state": {
+              "type": "timeline",
+              "state": {}
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "horizontal",
+    "width": 445.76690673828125,
+    "collapsed": true
+  },
+  "lastOpenFiles": [
+    "START HERE.md",
+    "Acronyms.md",
+    "HOME.md",
+    "TODO.md",
+    "Top of Mind.md",
+    "Training.md",
+    "Taxonomy.md",
+    "Plugins.md",
+    "Untitled.md",
+    "& another sample.md"
+  ]
+}
