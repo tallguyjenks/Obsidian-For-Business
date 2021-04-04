@@ -6,7 +6,7 @@ Public Sub config(vaultPathToSaveFileTo As String, personNameStartChar As String
     '================================================'
     ' Make sure this is the absolute path where you want your files to be sent to
     ' !IMPORTANT! make sure you have a trailing backslash at the end of the path `\`
-    vaultPathToSaveFileTo = "C:\Users\bjenks\OneDrive - Covered California\Desktop\"
+    vaultPathToSaveFileTo = "C:\Users\bjenks\Desktop\Vault\"
     '================================================'
     ' This is what is added to the links inside the produced documents for people
     ' so it would look like:
@@ -18,6 +18,9 @@ Public Sub config(vaultPathToSaveFileTo As String, personNameStartChar As String
     ' ^^^^^^^^^^^^^^^^^^^^^^^
     ' THE ABOVE ARE MANDATORY
     '
+    ' 
+    ' 
+    ' 
     ' THE BELOW ARE OPTIONAL
     ' VVVVVVVVVVVVVVVVVVVVVVV
     
