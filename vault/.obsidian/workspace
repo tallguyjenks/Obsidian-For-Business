@@ -39,7 +39,7 @@
             "id": "b4921c3d7e704dde",
             "type": "leaf",
             "state": {
-              "type": "recent-files",
+              "type": "empty",
               "state": {}
             }
           }
@@ -113,7 +113,7 @@
             "id": "c4e436e735bd3fdb",
             "type": "leaf",
             "state": {
-              "type": "calendar",
+              "type": "empty",
               "state": {}
             }
           }
@@ -146,7 +146,7 @@
             "id": "19630d4802194ef6",
             "type": "leaf",
             "state": {
-              "type": "timeline",
+              "type": "empty",
               "state": {}
             }
           }
@@ -161,13 +161,13 @@
   "lastOpenFiles": [
     "START HERE.md",
     "Acronyms.md",
-    "HOME.md",
-    "TODO.md",
-    "Top of Mind.md",
-    "Training.md",
     "Taxonomy.md",
+    "TODO.md",
+    "HOME.md",
+    "Top of Mind.md",
+    "Log/Daily/2021-04-04.md",
+    "Training.md",
     "Plugins.md",
-    "Untitled.md",
-    "& another sample.md"
+    "Untitled.md"
   ]
 }
