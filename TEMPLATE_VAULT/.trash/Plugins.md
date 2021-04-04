@@ -1,0 +1,50 @@
+---
+tags:
+aliases: 
+cssclass:
+---
+
+- COMMUNITY
+	- Add codemirror matchbrackets.js
+	- Advanced Tables
+	- Calendar
+	- Copy button for code blocks
+	- cycle through panes
+	- day planner
+	- editor syntax highlight
+	- extended mathjax
+	- full screen mode plugin
+	- mindmap
+	- paste url into selection
+	- quick switcher++
+	- reading time
+	- recent files
+	- relative line numbers 
+	- sliding panes
+	- vantage
+- CORE
+	- workspaces
+	- open in default app
+	- audio recorder
+	- slides
+	- outline
+	- templates
+	- daily notes
+	- command palette
+	- tag pane
+	- backlinks
+	- graph view
+	- search
+	- file explorer
+- FILES AND LINKS
+	- enable all file extentions 
+- EDITOR
+	- spell check
+	- auto pair brackets
+	- markdow auto pair
+	- smart indent lists
+	- fold heading
+	- fold indent
+	- show line number
+	- use tabs
+	- line wrap

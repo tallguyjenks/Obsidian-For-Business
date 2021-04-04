@@ -68,7 +68,7 @@
   - Microsoft Office VBA libraries activated
     - Microsoft Forms 2.0 Object Library
     - Microsoft VBScript Regular Expressions 5.5
-- For the Vault
+- For the TEMPLATE_VAULT
   - Obsidian
 
 ### Recommended
@@ -86,7 +86,7 @@
    - SSH
    - HTTPS
    - a `.zip` etc.
-2. Take the `vault/` directory and rename it to what ever you want your business vault to be named
+2. Take the `TEMPLATE_VAULT/` directory and rename it to what ever you want your business vault to be named
 3. Open that folder in [Obsidian](https://obsidian.md/) as a new vault
 4. Explore, play, find out what works and doesn't and change what ever you'd like
 
