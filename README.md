@@ -21,6 +21,10 @@
 
 > A combination of a template vault with initial structure and some Microsoft Office VBA Macros to facilitate a powerful, extensible, and flexible plain text workflow using Microsoft Office and Obsidian For Business.
 
+**If you enjoy this product and want to support it's development consider GitHub Sponsor ship:**
+
+[Sponsor this Work](https://github.com/sponsors/tallguyjenks)
+
 ## Table of Contents
 
 - [Obsidian For Business](#obsidian-for-business)
