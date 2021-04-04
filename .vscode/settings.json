@@ -1,0 +1,113 @@
+{
+    "todo-tree.tree.showScanModeButton": false,
+    "todo-tree.general.tags": [
+        "BUG",
+        "HACK",
+        "FIXME",
+        "TODO",
+        "HOTFIX",
+        "[ ]",
+        "DOC",
+        "TEST",
+        "QA"
+    ],
+    "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS)",
+    "todo-tree.highlights.defaultHighlight": {
+        "icon": "arrow-right",
+        "type": "line",
+        "iconColour": "#ebdbb2",
+        "gutterIcon": true,
+        "fontStyle": "italic"
+    },
+    "todo-tree.highlights.customHighlight": {
+        "BUG": {
+            "icon": "bug",
+            "foreground": "#9d0006",
+            "iconColour": "#9d0006",
+            "fontWeight": "bold"
+        },
+        "HACK": {
+            "icon": "alert",
+            "foreground": "#cc241d",
+            "iconColour": "#cc241d",
+            "fontWeight": "bold"
+        },
+        "FIXME": {
+            "icon": "tools",
+            "foreground": "#b8bb26",
+            "iconColour": "#b8bb26",
+        },
+        "TODO": {
+            "icon": "check-circle",
+            "foreground": "#d16d0e",
+            "iconColour": "#d16d0e",
+        },
+        "HOTFIX": {
+            "icon": "flame",
+            "foreground": "#fb4934",
+            "iconColour": "#fb4934",
+            "fontWeight": "bold"
+        },
+        "[ ]": {
+            "icon": "check-circle",
+            "foreground": "#689d6a",
+            "iconColour": "#689d6a"
+        },
+        "DOC": {
+            "icon": "book",
+            "foreground": "#458588",
+            "iconColour": "#458588"
+        },
+        "TEST": {
+            "icon": "beaker",
+            "foreground": "#b16286",
+            "iconColour": "#b16286"
+        },
+        "QA": {
+            "icon": "eye",
+            "foreground": "#d79921",
+            "iconColour": "#d79921"
+        }
+    },
+    "better-comments.multilineComments": true,
+    "better-comments.highlightPlainText": true,
+    "better-comments.tags": [
+        {
+            "tag": "!",
+            "color": "#cc241d",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+        },
+        {
+            "tag": "?",
+            "color": "#458588",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+        },
+        {
+            "tag": "//",
+            "color": "#474747",
+            "strikethrough": true,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+        },
+        {
+            "tag": "*",
+            "color": "#689d6a",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+        }
+    ]
+
+}
