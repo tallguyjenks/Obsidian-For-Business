@@ -6,19 +6,8 @@ labels: question
 assignees: ""
 ---
 
-### Question
+# Question
 
-Ask your question.
+DO NOT ASK YOUR QUESTION HERE.
 
-<!--
-Please keep the below portion in your issue. Your issue will be closed if any of the boxes is not checked (i.e., replace `[ ]` by `[x]`).
--->
-
----
-
-By filing a question to this repo, I promise that
-
--   [ ] I have reviewed any relevant repo FAQ sections
--   [ ] I have searched open/closed issues on this repo for my answer
-
-I understand that my issue may be closed if I don't fulfill my promises.
+Please post your questions in the [[[Discussions]]](https://github.com/tallguyjenks/Obsidian-For-Business/discussions/categories/q-a) section.
