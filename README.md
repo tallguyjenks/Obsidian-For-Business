@@ -29,6 +29,7 @@
   - [Requirements](#requirements)
     - [Recommended](#recommended)
   - [Installation](#installation)
+    - [Getting the Outlook Utilities Installed](#getting-the-outlook-utilities-installed)
     - [Users](#users)
     - [Contributors](#contributors)
   - [Usage](#usage)
@@ -47,10 +48,15 @@
 
 [Return To Top](#table-of-contents)
 
-- Easy Johnny Decimal tagging and refactorting of emails en-masse
-- Extract emails and calendar meetings to plain text straight to your vault
-- Easy configuration of several facets of this system in [USER_CONFIG](USER_CONFIG.vb)
 - A template business vault to get you started using `Obsidian For Business`
+- Easy Johnny Decimal tagging and refactorting of emails en-masse
+  - Select email(s) and run the `JDAdd` macro and you type in a tag like: `12.04` and all your email subject lines will get a `[12.04]` tag added to the end of the subject line for easy searching described more in detail [HERE](https://johnnydecimal.com/concepts/managing-email/)
+  - To easily remove an entire tag from email(s) select them all and run `JDRemove` and 1 tag will be removed from the end of the subject line
+  - Conversation view groups will not display the tag only the individual email items
+- Extract emails and calendar meetings to plain text straight to your vault
+  - Select any number of emails in the interface and run the `SaveEmail` utility and each email will be extracted to the designated vault file path set in [USER_CONFIG](USER_CONFIG.vb)
+- Extract meeting attdendees and details by selecting a single meeting at a time in the calendar interface and running `SaveMeeting` and the detailes will be extracted to the designated vault file path set in [USER_CONFIG](USER_CONFIG.vb) 
+- Several facets of this system are configured and documented in [USER_CONFIG](USER_CONFIG.vb)
 
 ## Requirements
 
@@ -58,7 +64,7 @@
 
 - For the VBA Tools
   - Microsoft Windows
-  - Microsoft Office 
+  - Microsoft Office
   - Microsoft Office VBA libraries activated
     - Microsoft Forms 2.0 Object Library
     - Microsoft VBScript Regular Expressions 5.5
@@ -84,7 +90,40 @@
 3. Open that folder in [Obsidian](https://obsidian.md/) as a new vault
 4. Explore, play, find out what works and doesn't and change what ever you'd like
 
-<!-- TODO Document the VBA Process with screen shots  -->
+### Getting the Outlook Utilities Installed
+
+1. Open Outlook
+2. press & hold <kbd>Alt</kbd> then press <kbd>f11</kbd>
+3. The Visual Basic Editor will open and you'll see something that looks like this:
+
+![vba1](images/vba1.png)
+
+4. The first thing we need to do is activate some library references
+5. Go to `Tools > References`
+
+![vba2](images/vba2.png)
+
+6. and you'll see this dialog box open. 
+7. Ensure all these items are selected if they are not, find them and select them. Namely the 2 necessary ones are
+    - Microsoft Forms 2.0 Object Library
+    - Microsoft VBScript Regular Expressions 5.5
+
+![vba3](images/vba3.png)
+
+If you cant find things like `Microsoft Office 16.0 Object Library` don't worry, you might not have the latest versions. IF you encounter any issues please file a bug report but It is unlikely you'll encounter many issues if any with these tools.
+
+
+8. Next we need to get the code into the Outlook Application. This is sadly a manual process given how antiquated the toolset is so apologies but you'll need to copy/paste and rename the macros you decide to use in Outlook.
+9. To start click the depicted button and select `Module` for every `.vb` file you want to use in this workflow:
+
+![vba4](images/vba4.png)
+
+10. Name the files exactly as you see listed below. To change the name of a new module you'll use the `Properties` window as shown below. It should automatically be visible when you open the Editor with the hotkey combo from earlier
+
+![vba5](images/vba5.png)
+
+By itself these steps allow you to use the macros but it's not a very userfriendly experience. To see my recommended setup for these macros see [Usage](#usage).
+
 ### Users
 
 [Return To Top](#table-of-contents)
@@ -105,7 +144,38 @@ See [CONTRIBUTING](#contributing)
 
 [Return To Top](#table-of-contents)
 
-<!-- TODO Advice for QA tool bar for macros -->
+Now that you've finished installing the code from [Installation](#getting-the-outlook-utilities-installed) We need to make a more friendly experience for their usage.
+
+We will do this using the `Quick Access Toolbar in Outlook`.
+
+1. At the top of your Outlook application there will be a little down arrow icon and some other icons in the top left of the application. 
+
+![QA1](images/QA1.png)
+
+2. Click the down arrow and select the `More Commands` option
+
+![QA2](images/QA2.png)
+
+3. You'll get a screen that looks similar to this, under the `Choose commands from` drop down select `Macros` and you'll see a list of the code files we added.
+4. because of the way VBA works you cant name the functions the same as the modules so thats why the names differ but it should be fairly obvious which are which.
+5. Select the macro items and click the `Add >>` button to move them to the Quick Access Toolbar menu (`<Separators>` are useful for visually separating groups of commands)
+
+![QA3](images/QA3.png)
+
+6. Now we can get a little more aesthetic and select a Macro on the right hand side of the dialog box then click `Modify...`
+
+![QA4](images/QA4.png)
+
+7. This will let you select a custom icon to display on the Quick Access Toolbar for the macro so they are a little more intuitive to view
+8. When finished click `Ok` until all menus and windows are closed
+
+![QA5](images/QA5.png)
+
+With that all done you'll have some icons on your Quick Access Toolbar to click for your automated actions but to take it a step further, if you simply press <kbd>Alt</kbd> the Quick Access Toolbar will highlight the icons with numbers so you can simply press a number afterwards to run the action for an entirely keyboard-centric workflow:
+
+![QA6](images/QA6.png)
+
+
 
 ### Example
 
