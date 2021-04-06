@@ -1,1 +1,1 @@
-{{tp_title}}
+<%tp.file.title%>
