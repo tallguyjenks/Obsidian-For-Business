@@ -1,6 +1,20 @@
 Option Explicit
 
-Public Sub config(vaultPathToSaveFileTo As String, personNameStartChar As String, Optional emailFileNameStartChr As String, Optional emailTypeLink As String, Optional meetingFileNameStartChr As String, Optional meetingTypeLink As String, Optional trainingFileNameStartChr As String, Optional trainingTypeLink As String)
+Public Sub config(vaultPathToSaveFileTo As String, personNameStartChar As String, Optional emailFileNameStartChr As String, Optional emailTypeLink As String, Optional meetingFileNameStartChr As String, Optional meetingTypeLink As String, Optional trainingFileNameStartChr As String, Optional trainingTypeLink As String, Optional contactFileNameStartChr As String, Optional contactTypeLink As String)
+    
+    '    Public Sub config(
+    '                  vaultPathToSaveFileTo As String
+    '                , personNameStartChar As String
+    '                , Optional emailFileNameStartChr As String
+    '                , Optional emailTypeLink As String
+    '                , Optional meetingFileNameStartChr As String
+    '                , Optional meetingTypeLink As String
+    '                , Optional trainingFileNameStartChr As String
+    '                , Optional trainingTypeLink As String
+    '                , Optional contactFileNameStartChr As String
+    '                , Optional contactTypeLink As String
+    '   )
+    
     '================================================'
     '====DECLARE=YOUR=FILE=PATH=TO=SAVE=FILES=TO====='
     '================================================'
@@ -18,9 +32,6 @@ Public Sub config(vaultPathToSaveFileTo As String, personNameStartChar As String
     ' ^^^^^^^^^^^^^^^^^^^^^^^
     ' THE ABOVE ARE MANDATORY
     '
-    ' 
-    ' 
-    ' 
     ' THE BELOW ARE OPTIONAL
     ' VVVVVVVVVVVVVVVVVVVVVVV
     
@@ -42,6 +53,12 @@ Public Sub config(vaultPathToSaveFileTo As String, personNameStartChar As String
     trainingFileNameStartChr = "T "
 
     '================================================'
+    ' This is the beginning of the contact file name and the H1 heading inside the file
+    ' Do not leave a space if you want the result to look like:
+    ' ex: "@Bryan Jenks"
+    contactFileNameStartChr = "@"
+    
+    '================================================'
     ' These set the meta data links in the files so that there is a file named
     ' `+.md` that links to all emails. It's another way of sifting through your data
     ' You do not need to use these. To turn them off just leave a pair of empty quotes
@@ -50,6 +67,7 @@ Public Sub config(vaultPathToSaveFileTo As String, personNameStartChar As String
     emailTypeLink = "[[+]]"
     meetingTypeLink = "[[&]]"
     trainingTypeLink = "[[!]]"
+    contactTypeLink = "[[@]]"
     
 End Sub
 
