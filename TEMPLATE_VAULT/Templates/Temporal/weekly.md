@@ -1,20 +1,16 @@
 ### Weekly Review:
-%% This template Requires the calendar plugin %%
-[[{{date:gggg-[W]ww}}]] <== <button class="date_button_today">This Week</button> ==> [[{{date:gggg-[W]ww}}]]
+%% This template Requires the Templatr plugin and should be run on fridays, if not on friday, the value offsets should be adjusted %%
+[[<%tp.date.now("YYYY-[W]ww", -7)%>]] <== This Week ==> [[<%tp.date.now("YYYY-[W]ww", 7)%>]]
 
-[[{{sunday:gggg-MM-DD}}]] ==> [[{{saturday:gggg-MM-DD}}]]
+[[<%tp.date.now("YYYY-MM-DD", -4)%>]] ==> [[<%tp.date.now("YYYY-MM-DD")%>]] 
 
-- [[{{sunday:gggg-MM-DD}}]]
+- [[<%tp.date.now("YYYY-MM-DD", -4)%>]] 
 	- 
-- [[{{monday:gggg-MM-DD}}]]
+- [[<%tp.date.now("YYYY-MM-DD", -3)%>]] 
 	- 
-- [[{{tuesday:gggg-MM-DD}}]]
+- [[<%tp.date.now("YYYY-MM-DD", -2)%>]] 
 	- 
-- [[{{wednesday:gggg-MM-DD}}]]
+- [[<%tp.date.now("YYYY-MM-DD", -1)%>]] 
 	- 
-- [[{{thursday:gggg-MM-DD}}]]
-	- 
-- [[{{friday:gggg-MM-DD}}]]
-	- 
-- [[{{saturday:gggg-MM-DD}}]]
+- [[<%tp.date.now("YYYY-MM-DD")%>]]
 	- 
