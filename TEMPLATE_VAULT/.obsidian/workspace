@@ -6,11 +6,10 @@
       {
         "id": "f7c4c4b93c6dfb40",
         "type": "leaf",
-        "active": true,
         "state": {
           "type": "markdown",
           "state": {
-            "file": "START HERE.md",
+            "file": "Log/Daily/2021-04-06.md",
             "mode": "source"
           }
         }
@@ -105,7 +104,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "START HERE.md"
+                "file": "Log/Daily/2021-04-06.md"
               }
             }
           },
@@ -131,7 +130,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "START HERE.md",
+                "file": "Log/Daily/2021-04-06.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -158,7 +157,9 @@
     "width": 445.76690673828125,
     "collapsed": true
   },
+  "active": "f7c4c4b93c6dfb40",
   "lastOpenFiles": [
+    "Log/Daily/2021-04-06.md",
     "START HERE.md",
     "Acronyms.md",
     "Taxonomy.md",
@@ -167,7 +168,6 @@
     "Top of Mind.md",
     "Log/Daily/2021-04-04.md",
     "Training.md",
-    "Plugins.md",
-    "Untitled.md"
+    "Plugins.md"
   ]
 }

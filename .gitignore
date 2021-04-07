@@ -187,5 +187,5 @@ $RECYCLE.BIN/
 # End of https://www.gitignore.io/api/windows,macos,linux,git,python
 
 # My additions for obsidian
-Vault/.trash
-Vault/.obsidian/plugins
+TEMPLATE_VAULT/.trash
+TEMPLATE_VAULT/.obsidian/plugins
