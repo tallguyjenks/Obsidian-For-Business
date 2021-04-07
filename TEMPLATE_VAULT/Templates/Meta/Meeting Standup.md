@@ -1,7 +1,1 @@
----
-tags: Meeting/Standup
-aliases: 
-  - 
-cssclass:
----
-
+/Standup

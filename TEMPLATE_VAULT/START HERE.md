@@ -27,6 +27,7 @@ Some of the system relies on some 3rd party plugins
 	- `Day Planner`
 	- `Templater`
 - and there are a myriad of other helpful plugins added that i think would be very helpful.
+- Do update all the plugins when first opening the vault (**HIGHLY** recommended)
 
 ## The Office 365 Utilities
 

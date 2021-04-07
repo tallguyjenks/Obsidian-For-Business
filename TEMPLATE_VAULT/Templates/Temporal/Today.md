@@ -1,1 +1,1 @@
-{{tp_date}}
+<%tp.date.now("YYYY_MM_DD")%>

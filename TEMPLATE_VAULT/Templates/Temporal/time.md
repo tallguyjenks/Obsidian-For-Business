@@ -1,1 +1,1 @@
-{{tp_time}}
+<%tp.date.now("HH:mm")%>

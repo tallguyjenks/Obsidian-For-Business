@@ -1,6 +1,0 @@
----
-tags: Person
-aliases:
-  - 
-cssclass:
----

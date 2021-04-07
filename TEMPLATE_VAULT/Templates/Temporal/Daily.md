@@ -23,11 +23,12 @@ gantt
 
 ## On This Day...
 
-[[2020-{{date:MM-DD}}]]
+[[2020-<%tp.date.now("MM-DD")%>]]
 
 ---
 
 %% This template requires the calendar plugin %%
-[[{{tp_yesterday}}]] <== <button class="date_button_today">Today</button> ==> [[{{tp_tomorrow}}]]
+[[<%tp.date.now("YYYY-MM-DD", -1)%>]] <== <button class="date_button_today">Today</button> ==> [[<%tp.date.now("YYYY-MM-DD", 1)%>]]
 
 ---
+

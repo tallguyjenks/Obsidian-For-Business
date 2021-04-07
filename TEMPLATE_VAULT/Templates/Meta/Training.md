@@ -1,7 +1,0 @@
----
-tags: Training
-aliases: 
-  - 
-cssclass: 
----
-

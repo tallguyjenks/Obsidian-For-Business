@@ -1,7 +1,1 @@
----
-tags: Meeting/Allstaff
-aliases: 
-  - 
-cssclass:
----
-
+/Allstaff

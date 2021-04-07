@@ -1,2 +1,2 @@
-=={{tp_date}} {{tp_time}}==
+==<%tp.date.now("YYYY_MM_DD HH:mm")%>==
 

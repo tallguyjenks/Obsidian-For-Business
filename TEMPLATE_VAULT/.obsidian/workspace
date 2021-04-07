@@ -4,14 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "f7c4c4b93c6dfb40",
+        "id": "437f9f49719489a4",
         "type": "leaf",
         "state": {
-          "type": "markdown",
-          "state": {
-            "file": "Log/Daily/2021-04-06.md",
-            "mode": "source"
-          }
+          "type": "empty",
+          "state": {}
+        },
+        "pane-relief:history-v1": {
+          "pos": 0,
+          "stack": [
+            {
+              "leaf": "437f9f49719489a4",
+              "group": null,
+              "state": "{\"type\":\"empty\",\"state\":{}}",
+              "eState": "{}"
+            }
+          ]
         }
       }
     ],
@@ -103,9 +111,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Log/Daily/2021-04-06.md"
-              }
+              "state": {}
             }
           },
           {
@@ -113,6 +119,14 @@
             "type": "leaf",
             "state": {
               "type": "empty",
+              "state": {}
+            }
+          },
+          {
+            "id": "b0b9fa8c500fe6c7",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
               "state": {}
             }
           }
@@ -130,7 +144,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Log/Daily/2021-04-06.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -157,17 +170,17 @@
     "width": 445.76690673828125,
     "collapsed": true
   },
-  "active": "f7c4c4b93c6dfb40",
+  "active": "437f9f49719489a4",
   "lastOpenFiles": [
-    "Log/Daily/2021-04-06.md",
-    "START HERE.md",
+    "Training.md",
     "Acronyms.md",
-    "Taxonomy.md",
     "TODO.md",
     "HOME.md",
     "Top of Mind.md",
-    "Log/Daily/2021-04-04.md",
-    "Training.md",
-    "Plugins.md"
+    "Taxonomy.md",
+    "START HERE.md",
+    "Templates/Temporal/yearly.md",
+    "Templates/Temporal/monthly.md",
+    "Templates/Temporal/weekly.md"
   ]
 }
