@@ -1,0 +1,10 @@
+{
+  "id": "csv-obsidian",
+  "name": "CSV Editor",
+  "author": "death_au",
+  "authorUrl": "https://github.com/deathau",
+  "description": "Edit CSV files in Obsidian",
+  "isDesktopOnly": false,
+  "version": "0.0.1",
+  "minAppVersion": "0.10.11"
+}

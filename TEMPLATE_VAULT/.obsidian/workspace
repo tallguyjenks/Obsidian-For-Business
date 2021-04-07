@@ -4,7 +4,7 @@
     "type": "split",
     "children": [
       {
-        "id": "437f9f49719489a4",
+        "id": "9283f4c7afa96ca3",
         "type": "leaf",
         "state": {
           "type": "empty",
@@ -14,7 +14,7 @@
           "pos": 0,
           "stack": [
             {
-              "leaf": "437f9f49719489a4",
+              "leaf": "9283f4c7afa96ca3",
               "group": null,
               "state": "{\"type\":\"empty\",\"state\":{}}",
               "eState": "{}"
@@ -170,8 +170,9 @@
     "width": 445.76690673828125,
     "collapsed": true
   },
-  "active": "437f9f49719489a4",
+  "active": "9283f4c7afa96ca3",
   "lastOpenFiles": [
+    "Day Planners/Day Planner-20210406.md",
     "Training.md",
     "Acronyms.md",
     "TODO.md",
@@ -180,7 +181,6 @@
     "Taxonomy.md",
     "START HERE.md",
     "Templates/Temporal/yearly.md",
-    "Templates/Temporal/monthly.md",
-    "Templates/Temporal/weekly.md"
+    "Templates/Temporal/monthly.md"
   ]
 }

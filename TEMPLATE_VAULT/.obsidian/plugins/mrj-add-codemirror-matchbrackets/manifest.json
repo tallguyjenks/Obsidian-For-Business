@@ -1,0 +1,9 @@
+{
+  "id": "mrj-add-codemirror-matchbrackets",
+  "name": "Add Codemirror matchbrackets.js",
+  "version": "1.0.0",
+  "description": "This plugins adds matchbrackets.js which allows to use `di[` or `ya(` commands in Vim mode",
+  "author": "MrJackphil",
+  "authorUrl": "https://mrjackphil.com",
+  "isDesktopOnly": false
+}
