@@ -5,10 +5,10 @@ no-changes-template: "- No changes"
 categories:
   - title: "🚀 New Features"
     labels:
-      - "enhancement"
+      - ["feature request", "feature request.new", "feature request.new.research", "feature request.change"]
   - title: "🐛 Bug Fixes"
     labels:
-      - "bug"
+      - ["bug", "bug.reproduceable", "bug.not reproduceable", "bug.hotfix"]
   - title: "🔨 Maintenance"
     labels:
       - "maintenance"
