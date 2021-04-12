@@ -12,4 +12,4 @@
 - [[<%tp.date.now("YYYY-[W]ww", 21)%>]]
 	- 
 - [[<%tp.date.now("YYYY-[W]ww", 28)%>]]
-- 
+    - 
