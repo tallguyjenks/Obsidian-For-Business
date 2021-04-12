@@ -26,9 +26,14 @@ gantt
 [[2020-<%tp.date.now("MM-DD")%>]]
 
 ---
+[[<%tp.date.yesterday("YYYY-MM-DD")%>]] <== <button class="date_button_today">Today</button> ==> [[<%tp.date.tomorrow("YYYY-MM-DD")%>]]
 
-%% This template requires the calendar plugin %%
-[[<%tp.date.now("YYYY-MM-DD", -1)%>]] <== <button class="date_button_today">Today</button> ==> [[<%tp.date.now("YYYY-MM-DD", 1)%>]]
-
----
-
+<%* if (tp.date.now("M") == 1 & tp.date.now("D") < 5) { %>
+- [ ] Do Annual Review
+<%* } %>
+<%* if (tp.date.now("D") < 6) { %>
+- [ ] Do Monthly Review
+<%* } %>
+<%* if (tp.date.now("ddd") == "Fri") { %>
+- [ ] Do Weekly Review
+<%* } %>
