@@ -4,17 +4,26 @@
     "type": "split",
     "children": [
       {
-        "id": "9283f4c7afa96ca3",
+        "id": "5bbda1e6df71534d",
         "type": "leaf",
         "state": {
-          "type": "empty",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "Templates/Meta/yaml.md",
+            "mode": "source"
+          }
         },
         "pane-relief:history-v1": {
           "pos": 0,
           "stack": [
             {
-              "leaf": "9283f4c7afa96ca3",
+              "leaf": "5bbda1e6df71534d",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Templates/Meta/yaml.md\",\"mode\":\"source\"}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
+            },
+            {
+              "leaf": "5bbda1e6df71534d",
               "group": null,
               "state": "{\"type\":\"empty\",\"state\":{}}",
               "eState": "{}"
@@ -111,7 +120,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Templates/Meta/yaml.md"
+              }
             }
           },
           {
@@ -144,6 +155,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Templates/Meta/yaml.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -170,17 +182,17 @@
     "width": 445.76690673828125,
     "collapsed": true
   },
-  "active": "9283f4c7afa96ca3",
+  "active": "5bbda1e6df71534d",
   "lastOpenFiles": [
+    "Templates/Meta/yaml.md",
+    "Log/Daily/2021-04-06.md",
+    "Templates/Temporal/Date.md",
     "Day Planners/Day Planner-20210406.md",
     "Training.md",
     "Acronyms.md",
     "TODO.md",
     "HOME.md",
     "Top of Mind.md",
-    "Taxonomy.md",
-    "START HERE.md",
-    "Templates/Temporal/yearly.md",
-    "Templates/Temporal/monthly.md"
+    "Taxonomy.md"
   ]
 }
