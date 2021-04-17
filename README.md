@@ -15,6 +15,9 @@
     <img src="https://img.shields.io/github/contributors/tallguyjenks/Obsidian-For-Business">
   </a>
   <img src="https://img.shields.io/github/v/release/tallguyjenks/Obsidian-For-Business">
+  <a href="https://wakatime.com/badge/github/tallguyjenks/Obsidian-For-Business">
+    <img src="https://wakatime.com/badge/github/tallguyjenks/Obsidian-For-Business.svg"> 
+  </a>
 </p>
 
 <!-- Description -->
