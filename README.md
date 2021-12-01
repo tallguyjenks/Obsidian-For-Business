@@ -122,7 +122,6 @@
 
 If you cant find things like `Microsoft Office 16.0 Object Library` don't worry, you might not have the latest versions. IF you encounter any issues please file a bug report but It is unlikely you'll encounter many issues if any with these tools.
 
-
 8. Next we need to get the code into the Outlook Application. This is sadly a manual process given how antiquated the toolset is so apologies but you'll need to copy/paste and rename the macros you decide to use in Outlook.
 9. To start click the depicted button and select `Module` for every `.vb` file you want to use in this workflow:
 
@@ -142,13 +141,6 @@ There should be no administrative privledges required for any of these tools at 
 
 See [Usage](#usage)
 
-### Contributors
-
-[Return To Top](#table-of-contents)
-
-None yet! But PR's welcome!
-
-See [CONTRIBUTING](#contributing)
 
 ## Usage
 
@@ -250,6 +242,14 @@ See [RELEASES](https://github.com/tallguyjenks/Obsidian-For-Business/releases)
 [Return To Top](#table-of-contents)
 
 See [CODE OF CONDUCT](CODE_OF_CONDUCT.md)
+
+### Contributors
+
+[Return To Top](#table-of-contents)
+
+None yet! But PR's welcome!
+
+See [CONTRIBUTING](#contributing)
 
 ## Credits
 
