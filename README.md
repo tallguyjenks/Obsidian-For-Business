@@ -85,7 +85,7 @@
 
 [Return To Top](#table-of-contents)
 
-It is recommended to use the latest version of Obsidian. The template vault includes  community plugins. These should be updated to their latest versions using Obsidian's settings, the first time you open the vault.
+It is recommended to use the latest version of Obsidian. The template vault includes community plugins. These should be updated to their latest versions using Obsidian's settings, the first time you open the vault.
 
 ## Installation
 
