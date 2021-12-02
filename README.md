@@ -124,7 +124,7 @@ These steps enable the basic functionality of the macros but you can customize a
 
 After installing the Outlook utilities, you can make them friendlier to use, thanks to the `Quick Access Toolbar in Outlook`.
 
-1. At the top of your Outlook application there will be a little down arrow icon and some other icons in the top left of the application.  ![QA1](images/QA1.png)
+1. At the top of your Outlook application there will be a little down arrow icon and some other icons in the top left of the application. ![QA1](images/QA1.png)
 2. Click the down arrow and select the `More Commands` option ![QA2](images/QA2.png)
 3. You'll get a screen that looks similar to this, under the `Choose commands from` drop down select `Macros` and you'll see a list of the code files we added.
 4. because of the way VBA works you cant name the functions the same as the modules so thats why the names differ but it should be fairly obvious which are which.
