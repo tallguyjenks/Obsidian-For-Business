@@ -203,7 +203,9 @@ See [CODE OF CONDUCT](CODE_OF_CONDUCT.md)
 
 [Return To Top](#table-of-contents)
 
-None yet! But PR's welcome!
+- [@dylan-k](https://github.com/dylan-k)
+
+PR's welcome!
 
 See [CONTRIBUTING](#contributing)
 
