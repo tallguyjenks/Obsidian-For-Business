@@ -104,7 +104,7 @@ It is recommended to use the latest version of Obsidian. The template vault incl
 
 1. Open Outlook
 2. Press & hold <kbd>Alt</kbd> then press <kbd>f11</kbd>. The Visual Basic Editor will open. You'll see something that looks like this: ![vba1](images/vba1.png)
-3. The first thing we need to do is activate some library references. Go to `Tools > References`. [vba2](images/vba2.png)
+3. The first thing we need to do is activate some library references. Go to `Tools > References`.  ![vba2](images/vba2.png)
 4. The "References" dialog will open, shown below. ![vba3](images/vba3.png)
 5. Ensure all these items are selected. The 2 necessary ones are:
     - Microsoft Forms 2.0 Object Library
