@@ -114,7 +114,7 @@ If you cant find exact versions like `Microsoft Office 16.0 Object Library` don'
 6. Next we need to get the code into the Outlook Application. For this, you'll need the `.vb` files located in the `VBA Utilities` folder of this repository. You'll copy/paste the code from these macros to use them in Outlook.
 7. To start, open the 'Insert Module' dropdown depicted below. Select `Module` then paste in the contents of a `.vb` file. Do this for each macro you want to use, but `USER_CONFIG` and `SaveUtilities` are required. ![vba4](images/vba4.png)
 8. You'll need to change the name of each new module. To do this, use the `Properties` window shown below. It should automatically be visible when you open the Editor with the hotkey combo from earlier. Name the modules exactly as you see listed below. (Names should match the original filenames, minus the extension so use `SaveMeeting` for what you pasted from `SaveMeeting.vb`)  ![vba5](images/vba5.png)
-9. Open the `USER_CONFIG` module and edit the `vaultPathToSaveFileTo` variable with  the absolute path where you want your files to be sent. You must use a trailing backslash at the end of the path `\`
+9. Open the `USER_CONFIG` module and edit the `vaultPathToSaveFileTo` variable with the absolute path where you want your files to be sent. You must use a trailing backslash at the end of the path `\`
 
 These steps enable the basic functionality of the macros but you can customize a friendlier setup. See [Usage](#usage).
 
